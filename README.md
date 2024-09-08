@@ -4,26 +4,21 @@
 
 | **Topic**                                     | **Content**                                                                                                                                   | See |
 |:-----------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------|:------------------|
-| **1. Introduction to C#**                     | Basic syntax & structure (variables, data types, loops, conditionals)                                                                        |              |
+| **Introduction to C#**                         | Basic syntax & structure (variables, data types, loops, conditionals)                                                                        |              |
 |                                               | Differences between C# and Java/C++                                                                                                         |                  |
-|                                               | Understanding namespaces and common Unity namespaces (e.g., `using UnityEngine`)                                                            |                  |
-| **2. Object-Oriented Programming in C#**      | Classes, objects, properties vs. fields, and methods                                                                                         |             |
+|                                               | Understanding namespaces                                                            |                  |
+| **Object-Oriented Programming in C#**          | Classes, objects, properties vs. fields, and methods                                                                                         |             |
 |                                               | Inheritance and polymorphism in C#                                                                                                          |                  |
 |                                               | Access modifiers (`public`, `private`, `protected`)                                                                                          |                  |
 |                                               | Constructors and destructors (including garbage collection)                                                                                  |                  |
-| **3. C# and Unity Scripting Basics**          | Unity's component-based architecture                                                                                                         |              |
-|                                               | Introduction to `MonoBehaviour`, `Start()`, `Update()`, and Unity's event functions                                                          |                  |
-|                                               | Writing a simple script to manipulate GameObjects                                                                                            |                  |
-| **4. C# Advanced Features Used in Unity**     | Delegates and events (introduction and use in Unity)                                                                                          |              |
-|                                               | Coroutines (`IEnumerator`) and asynchronous tasks (e.g., object movement, timers)                                                            |                  |
-|                                               | Properties in C# and how they relate to Unity's Inspector                                                                                    |                  |
-| **5. Unity’s Common C# Data Structures**      | Arrays and Lists                                                                                                                             |               |
+| **Common C# Data Structures**                  | Arrays and Lists                                                                                                                             |               |
 |                                               | Dictionaries and key-value mapping                                                                                                           |                  |
 |                                               | Enumerations (Enums) for game state management                                                                                               |                  |
-| **6. Error Handling & Debugging**             | Exception handling with `try-catch` blocks                                                                                                   |               |
-|                                               | Using `Debug.Log` for debugging in Unity                                                                                                     |                  |
+| **Error Handling & Debugging**                 | Exception handling with `try-catch` blocks                                                                                                   |               |
 |                                               | Introduction to debugging in Visual Studio (breakpoints, variable inspection)                                                                |                  |
-
+| **C# Advanced Features**                     | Delegates and events                                                                                           |              |
+|                                               | Coroutines (`IEnumerator`) and asynchronous tasks                                                             |                  |
+|                                               | Properties in C#                                                                                     |                  |
 
 ## Exercises - Topics 1 & 2
 
