@@ -1,7 +1,7 @@
 # 2024 - 25 - GD - C# - Intro 
 
 
-# Content
+# Introduction to C# 
 
 | **Topic**                                     | **Content**                                                                                                                                   | **Time (hours)** |
 |:-----------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------|:------------------|
@@ -26,11 +26,7 @@
 |                                               | Introduction to debugging in Visual Studio (breakpoints, variable inspection)                                                                |                  |
 
 
-
-
-# Exercises
-
-## Topics 1 & 2
+## Exercises - Topics 1 & 2
 
 ### Exercise 1: Basic Syntax & Variables
 **Description**: Write a C# script that declares variables of different data types (`int`, `float`, `string`, `bool`). Assign values to these variables and print them using `Debug.Log`.  
