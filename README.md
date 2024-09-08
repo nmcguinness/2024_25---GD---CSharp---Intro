@@ -11,6 +11,9 @@ This repository contains code samples used to learn the basics of C# in preparat
 - [Tutorials Teacher - Learn C#](https://www.tutorialsteacher.com/csharp)
 - [Refactoring Guru - Design Patterns](https://refactoring.guru/design-patterns) 
 
+
+## Contents - General 
+
 | Completed | Topic | Description | Recommended Reading |
 | :-------: | :---------------- | :--------------- | :--------------- | 
 | [ ] | **Namespace Definition** | Organizing game code using namespaces to prevent conflicts. | [Namespace](https://www.tutorialspoint.com/csharp/csharp_namespaces.htm) |
