@@ -23,7 +23,7 @@ This repository contains code samples used to learn the basics of C# in preparat
 
 | Completed | Topic | Description | Recommended Reading |
 | :-------: | :---------------- | :--------------- | :--------------- | 
-| [ ] | **Namespace Definition** | Organizing game code using namespaces to prevent conflicts. | [Namespace](https://www.tutorialspoint.com/csharp/csharp_namespaces.htm) |
+| [x] | **Namespace Definition** | Organizing game code using namespaces to prevent conflicts. | [Namespace](https://www.tutorialspoint.com/csharp/csharp_namespaces.htm) |
 | [ ] | **Value and Reference Types** | Managing memory in Unity by understanding value and reference types. | [Value type and Reference type](https://www.tutorialsteacher.com/csharp/csharp-value-type-and-reference-type) |
 | [ ] | **Keywords (ref, out)** | Use of `ref` and `out` in game functions to optimize performance. | [ref](https://www.geeksforgeeks.org/ref-in-c-sharp/), [out](https://www.geeksforgeeks.org/out-parameter-with-examples-in-c-sharp/) |
 | [ ] | **Class Definition & Inheritance** | Class structures, constructors, inheritance, and polymorphism in game development. Understanding base and derived classes for enemy, player, etc. | [Class & Object](https://www.geeksforgeeks.org/c-sharp-class-and-object/) |
