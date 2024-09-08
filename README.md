@@ -36,8 +36,8 @@ This repository contains code samples used to learn the basics of C# in preparat
 | [ ] | **Static Methods & Fields** | Using static methods and fields for global game utilities (e.g., `Vector3.Zero`, GameManager). | [Static Methods](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members) |
 | [ ] | **Shallow vs Deep Copy** | Handling object references and copies (e.g., duplicating game objects vs referencing originals). | [Shallow Copy and Deep Copy in C#](https://www.geeksforgeeks.org/shallow-copy-and-deep-copy-in-c-sharp/) |
 | [ ] | **Coroutines in Unity** | Using coroutines for timing, delays, and non-blocking actions in Unity (e.g., timed power-ups, respawns). | [Unity Coroutines](https://docs.unity3d.com/Manual/Coroutines.html) |
-| [ ] | **Async & Await** | Using `async` and `await` for asynchronous operations in Unity, such as file I/O or web requests. | [Async and Await](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/
-| [ ] | **Garbage Collection & Memory Management** | Understanding memory management in Unity and how C# garbage collection works to avoid performance issues. | [Garbage Collection in Unity](https://docs.unity3d.com/Manual/performance-garbage-collection.html) |
+| [ ] | **Async & Await** | Using `async` and `await` for asynchronous operations in Unity, such as file I/O or web requests. | [Async and Await](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/) |
+| [ ] | **Garbage Collection & Memory Management** | Understanding memory management in Unity and how C# garbage collection works to avoid performance issues. | [Garbage Collection in Unity](https://docs.unity3d.com/Manual/performance-garbage-collector.html) |
 | [ ] | **Game Optimization & Profiling** | Using Unity's profiler to optimize code and memory usage in games. Profiling delegate, lambda, and container usage. | [Unity Profiler](https://docs.unity3d.com/Manual/Profiler.html) |
 
 
