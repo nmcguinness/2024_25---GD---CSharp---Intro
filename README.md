@@ -2,7 +2,7 @@
 
 ## Overview 
 
-- This repository contains code samples used to learn the basics of C# in preparation for the development of the code for this module.
+This repository contains code samples used to learn the basics of C# in preparation for the development of the code for this module.
 
 ## Contents
 
