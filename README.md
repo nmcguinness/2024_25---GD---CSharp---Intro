@@ -3,22 +3,6 @@
 ## Overview 
 This repository contains code samples used to learn the basics of C# in preparation for the development of the code for this module.
 
-## Required Reading 
-- [Tutorials Teacher - Learn C#](https://www.tutorialsteacher.com/csharp)
-- [Refactoring Guru - Design Patterns](https://refactoring.guru/design-patterns) 
-
-## Recommended Reading 
-- [The C# type system](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types)
-- [Generate a constructor in Visual Studio](https://learn.microsoft.com/en-us/visualstudio/ide/reference/generate-constructor?view=vs-2019)
-
-## Exercises
-
-- [Namespace Definition](Exercises/Namespace%20Definition.md)
-- [Value & Reference Types](Exercises/Value%20and%20Reference%20Types.md)
-- [Keywords](Exercises/Keywords.md)
-- [Class Definition & Inheritance](Exercises/Class%20Definition%20&%20Inheritance.md)
-- [Structs and Enums](Exercises/Structs%20and%20Enums.md)
-
 ## Contents
 
 ### General 
@@ -49,8 +33,23 @@ This repository contains code samples used to learn the basics of C# in preparat
 | 22 | <ul><li>- [ ] </li></ul> | **Garbage Collection & Memory Management** | Understanding memory management in Unity and how C# garbage collection works to avoid performance issues. | [Garbage Collection in Unity](https://docs.unity3d.com/Manual/performance-garbage-collector.html) |
 | 23 | <ul><li>- [ ] </li></ul> | **Game Optimization & Profiling** | Using Unity's profiler to optimize code and memory usage in games. Profiling delegate, lambda, and container usage. | [Unity Profiler](https://docs.unity3d.com/Manual/Profiler.html) |
 
+## Required Reading 
+- [Tutorials Teacher - Learn C#](https://www.tutorialsteacher.com/csharp)
+- [Refactoring Guru - Design Patterns](https://refactoring.guru/design-patterns) 
 
-## Useful Tools & Tips
+## Recommended Reading 
+- [The C# type system](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types)
+- [Generate a constructor in Visual Studio](https://learn.microsoft.com/en-us/visualstudio/ide/reference/generate-constructor?view=vs-2019)
+
+## Exercises
+
+- [Namespace Definition](Exercises/Namespace%20Definition.md)
+- [Value & Reference Types](Exercises/Value%20and%20Reference%20Types.md)
+- [Keywords](Exercises/Keywords.md)
+- [Class Definition & Inheritance](Exercises/Class%20Definition%20&%20Inheritance.md)
+- [Structs and Enums](Exercises/Structs%20and%20Enums.md)
+
+## Tools & Tips
 - [Markdown](https://docs.github.com/en/enterprise-cloud@latest/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) in GitHub
 - Add emojis with [gitmoji](https://gitmoji.dev/) to your Git commits to improve readability
 
