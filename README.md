@@ -1,7 +1,8 @@
 # 2024 - 25 - GD - C# Concepts for Game Developers 
 
 ## Overview 
-This repository contains code samples used to learn the basics of C# in preparation for the development of the code for this module.
+
+- This repository contains code samples used to learn the basics of C# in preparation for the development of the code for this module.
 
 ## Contents
 
@@ -34,10 +35,12 @@ This repository contains code samples used to learn the basics of C# in preparat
 | 23 | <ul><li>- [ ] </li></ul> | **Game Optimization & Profiling** | Using Unity's profiler to optimize code and memory usage in games. Profiling delegate, lambda, and container usage. | [Unity Profiler](https://docs.unity3d.com/Manual/Profiler.html) |
 
 ## Required Reading 
+
 - [Tutorials Teacher - Learn C#](https://www.tutorialsteacher.com/csharp)
 - [Refactoring Guru - Design Patterns](https://refactoring.guru/design-patterns) 
 
 ## Recommended Reading 
+
 - [The C# type system](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types)
 - [Generate a constructor in Visual Studio](https://learn.microsoft.com/en-us/visualstudio/ide/reference/generate-constructor?view=vs-2019)
 
@@ -50,6 +53,7 @@ This repository contains code samples used to learn the basics of C# in preparat
 - [Structs and Enums](Exercises/Structs%20and%20Enums.md)
 
 ## Tools & Tips
+
 - [Markdown](https://docs.github.com/en/enterprise-cloud@latest/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) in GitHub
 - Add emojis with [gitmoji](https://gitmoji.dev/) to your Git commits to improve readability
 
