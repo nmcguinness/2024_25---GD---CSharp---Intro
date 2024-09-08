@@ -36,7 +36,7 @@ This repository contains code samples used to learn the basics of C# in preparat
 | [ ] | **Static Methods & Fields** | Using static methods and fields for global game utilities (e.g., `Vector3.Zero`, GameManager). | [Static Methods](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members) |
 | [ ] | **Shallow vs Deep Copy** | Handling object references and copies (e.g., duplicating game objects vs referencing originals). | [Shallow Copy and Deep Copy in C#](https://www.geeksforgeeks.org/shallow-copy-and-deep-copy-in-c-sharp/) |
 | [ ] | **Coroutines in Unity** | Using coroutines for timing, delays, and non-blocking actions in Unity (e.g., timed power-ups, respawns). | [Unity Coroutines](https://docs.unity3d.com/Manual/Coroutines.html) |
-| [ ] | **Async & Await** | Using `async` and `await` for asynchronous operations in Unity, such as file I/O or web requests. | [Async and Await](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/) |
+| [ ] | **Async & Await** | Using `async` and `await` for asynchronous operations in Unity, such as file I/O or web requests. | [Async and Await](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/) |
 | [ ] | **Garbage Collection & Memory Management** | Understanding memory management in Unity and how C# garbage collection works to avoid performance issues. | [Garbage Collection in Unity](https://docs.unity3d.com/Manual/performance-garbage-collector.html) |
 | [ ] | **Game Optimization & Profiling** | Using Unity's profiler to optimize code and memory usage in games. Profiling delegate, lambda, and container usage. | [Unity Profiler](https://docs.unity3d.com/Manual/Profiler.html) |
 
@@ -47,17 +47,25 @@ This repository contains code samples used to learn the basics of C# in preparat
 **Description**: Define a namespace called `MyGame` and include a `Player` class within it.  
 **Difficulty**: Easy
 
+---
+
 ### Exercise 2: Nested Namespaces  
 **Description**: Create a nested namespace `MyGame.Weapons` and add a `Weapon` class within it. The `Weapon` class should contain properties like `Damage` and `Range`.  
 **Difficulty**: Easy
+
+---
 
 ### Exercise 3: Organizing Code with Namespaces  
 **Description**: Create a project with two namespaces: `MyGame.Characters` and `MyGame.Items`. In `Characters`, create a `Player` class. In `Items`, create an `Item` class. Show how to use both classes in a main program.  
 **Difficulty**: Medium
 
+---
+
 ### Exercise 4: Namespace Conflict Resolution  
 **Description**: Create two namespaces, `MyGame.Physics` and `RealWorld.Physics`, both containing a `Vector3` class. Demonstrate how to use both classes in the same file using namespace aliasing.  
 **Difficulty**: Medium
+
+---
 
 ### Exercise 5: Namespace Refactoring  
 **Description**: Given the following class structure, refactor the classes into appropriate namespaces:
@@ -71,11 +79,42 @@ This repository contains code samples used to learn the basics of C# in preparat
    class GamePhysics { }
 ```
 
+## Exercises - Topics  - Value and Reference Types
+
+### Exercise 1: **Identify Value and Reference Types**:  
+   **Description**: Write a short program that declares and initializes a value type (e.g., `int`) and a reference type (e.g., `class`). Demonstrate the difference in behavior when assigning values between the two.  
+**Difficulty**: Easy
+
+---
+
+### Exercise 2: **Pass by Value vs. Reference**:  
+   **Description**: Write a program that demonstrates passing an `int` (value type) and a `class` (reference type) to methods, modifying them inside the methods, and observing the results in the caller.  
+**Difficulty**: Medium
+
+---
+
+### Exercise 3: **Custom Struct**:  
+   **Description**: Define a custom `struct` called `Vector2D` with `x` and `y` coordinates. Demonstrate how it behaves as a value type by assigning it to another variable and showing that they are independent.  
+**Difficulty**: Medium
+
+---
+
+### Exercise 4: **Performance Comparison**:  
+   **Description**: Create a program that allocates a large number of value type objects (e.g., `int`) and reference type objects (e.g., custom class `GameObject`). Use `Stopwatch` to measure the performance of copying values and references.  
+**Difficulty**: Medium
+
+---
+
+### Exercise 5: **Heap and Stack Memory**:  
+   **Description**: Explain, using code and comments, how value types and reference types are stored in memory (stack vs. heap). Create a small program to demonstrate this concept.  
+**Difficulty**: Medium
+
+
 ## Exercises - Topics  - Class Definition & Inheritance
 
 ### Exercise 1: Creating a Simple Class
 **Description**: Create a class called `Player` with fields for `name` (string), `health` (int), and `score` (int). In the `Start()` method of a script, create an instance of `Player`, set its values, and print them using `System.Debug.WriteLn`.  
-**Difficulty**: Medium
+**Difficulty**: Easy
 
 ```mermaid
 classDiagram
@@ -91,7 +130,7 @@ classDiagram
 
 ### Exercise 2: Class Methods
 **Description**: Expand the `Player` class by adding a method `TakeDamage(int damage)` that decreases the `health` of the player by the amount of damage taken. Test the method by calling it in the `Start()` method and printing the player’s new health.  
-**Difficulty**: Medium
+**Difficulty**: Easy
 
 ```mermaid
 classDiagram
@@ -108,7 +147,7 @@ classDiagram
 
 ### Exercise 3: Constructors
 **Description**: Modify the `Player` class by adding a constructor that takes `name`, `health`, and `score` as parameters to initialize the fields. Create an instance of `Player` using this constructor in the `Start()` method.  
-**Difficulty**: Medium
+**Difficulty**: Easy
 
 ```mermaid
 classDiagram
@@ -147,7 +186,7 @@ classDiagram
 
 ### Exercise 5: Polymorphism
 **Description**: Create another class `BossEnemy` that inherits from `Enemy`. Implement polymorphism by overriding the `TakeDamage()` method in `BossEnemy` to lose only half the damage. Create instances of `Enemy` and `BossEnemy`, and test them to see how damage is handled differently.  
-**Difficulty**: Medium-Hard
+**Difficulty**: Medium
 
 ```mermaid
 classDiagram
@@ -174,7 +213,7 @@ classDiagram
 
 ### Exercise 6: Access Modifiers
 **Description**: Modify the `Player` class to use appropriate access modifiers (`private`, `protected`, `public`) for fields and methods. Test the access restrictions by trying to directly access `health` from outside the class.  
-**Difficulty**: Medium-Hard
+**Difficulty**: Medium
 
 ```mermaid
 classDiagram
@@ -191,7 +230,7 @@ classDiagram
 
 ### Exercise 7: Properties (Getters & Setters)
 **Description**: Refactor the `Player` class to use C# properties (`get` and `set`) for `health` and `score`. Add validation in the setter of `health` to ensure it cannot go below zero. Test the property by trying to set `health` to a negative value.  
-**Difficulty**: Hard
+**Difficulty**: Medium
 
 ```mermaid
 classDiagram
@@ -210,7 +249,7 @@ classDiagram
 
 ### Exercise 8: Inheritance with Constructor Chaining
 **Description**: Modify the `Enemy` and `BossEnemy` classes to use constructor chaining when initializing `Player`'s fields (e.g., passing values to the base `Player` constructor). Create instances of both `Enemy` and `BossEnemy` with specific health values and verify that the constructor chain works properly.  
-**Difficulty**: Hard
+**Difficulty**: Medium
 
 ```mermaid
 classDiagram
