@@ -3,10 +3,6 @@
 ## Overview 
 This repository contains code samples used to learn the basics of C# in preparation for the development of the code for this module.
 
-## Useful Tools & Tips
-- [Markdown](https://docs.github.com/en/enterprise-cloud@latest/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) in GitHub
-- Add emojis with [gitmoji](https://gitmoji.dev/) to your Git commits to improve readability
-
 ## Required Reading 
 - [Tutorials Teacher - Learn C#](https://www.tutorialsteacher.com/csharp)
 - [Refactoring Guru - Design Patterns](https://refactoring.guru/design-patterns) 
@@ -53,8 +49,11 @@ This repository contains code samples used to learn the basics of C# in preparat
 | 22 | <ul><li>- [ ] </li></ul> | **Garbage Collection & Memory Management** | Understanding memory management in Unity and how C# garbage collection works to avoid performance issues. | [Garbage Collection in Unity](https://docs.unity3d.com/Manual/performance-garbage-collector.html) |
 | 23 | <ul><li>- [ ] </li></ul> | **Game Optimization & Profiling** | Using Unity's profiler to optimize code and memory usage in games. Profiling delegate, lambda, and container usage. | [Unity Profiler](https://docs.unity3d.com/Manual/Profiler.html) |
 
-## To Do - Content Created In-Class
 
-- [To Do](ToDo.md)
+## Useful Tools & Tips
+- [Markdown](https://docs.github.com/en/enterprise-cloud@latest/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) in GitHub
+- Add emojis with [gitmoji](https://gitmoji.dev/) to your Git commits to improve readability
 
+## To Do 
 
+- [Weekly Development Plan](ToDo.md)
