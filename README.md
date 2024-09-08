@@ -47,5 +47,17 @@ This repository contains code samples used to learn the basics of C# in preparat
 | 22 | <ul><li>- [ ] </li></ul> | **Garbage Collection & Memory Management** | Understanding memory management in Unity and how C# garbage collection works to avoid performance issues. | [Garbage Collection in Unity](https://docs.unity3d.com/Manual/performance-garbage-collector.html) |
 | 23 | <ul><li>- [ ] </li></ul> | **Game Optimization & Profiling** | Using Unity's profiler to optimize code and memory usage in games. Profiling delegate, lambda, and container usage. | [Unity Profiler](https://docs.unity3d.com/Manual/Profiler.html) |
 
+## To Do - Content Created In-Class
+
+### Week 1
+- [ ] Add namespace, static demos
+- [ ] Use 'ref' in a function call (see Program)
+- [ ] Add demo class(es) (see Vector3, Player, PlayerList)
+- [ ] Add constructor chaining (see Vector3)
+- [ ] Add properties (set/get) (see Vector3)
+- [ ] Add string interpolation demo (see Program, Vector3::ToString)
+- [ ] Add validation on set properties (see Vector3::X with ternary)
+- [ ] Add intellisense regions to organise our code (see Vector3)
+
 
 
