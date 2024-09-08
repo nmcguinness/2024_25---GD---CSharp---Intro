@@ -3,7 +3,7 @@
 ## Overview 
 This repository contains code samples used to learn the basics of C# in preparation for the development of the code for this module.
 
-## Useful 
+## Useful Tools & Tips
 - [Markdown](https://docs.github.com/en/enterprise-cloud@latest/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) in GitHub
 - Add emojis with [gitmoji](https://gitmoji.dev/) to your Git commits to improve readability
 
@@ -23,7 +23,9 @@ This repository contains code samples used to learn the basics of C# in preparat
 - [Class Definition & Inheritance](Exercises/Class%20Definition%20&%20Inheritance.md)
 - [Structs and Enums](Exercises/Structs%20and%20Enums.md)
 
-## Contents - General 
+## Contents
+
+### General 
 
 | # | Completed | Topic | Description | Recommended Reading |
 | - | :-------: | :---------------- | :--------------- | :--------------- |
