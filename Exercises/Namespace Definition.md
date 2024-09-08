@@ -26,6 +26,7 @@
 
 ### Exercise 5: Namespace Refactoring  
 **Description**: Given the following class structure, refactor the classes into appropriate namespaces.
+
 **Difficulty**: Medium
 
 ```csharp
