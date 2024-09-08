@@ -23,7 +23,7 @@
 ## Exercises - Topics 1 & 2
 
 ### Exercise 1: Basic Syntax & Variables
-**Description**: Write a C# script that declares variables of different data types (`int`, `float`, `string`, `bool`). Assign values to these variables and print them using `Debug.Log`.  
+**Description**: Write a C# script that declares variables of different data types (`int`, `float`, `string`, `bool`). Assign values to these variables and print them using `System.Debug.WriteLn`.  
 **Difficulty**: Easy
 
 ---
@@ -41,13 +41,13 @@
 ---
 
 ### Exercise 4: Functions & Parameters
-**Description**: Write a function in C# that takes two integers as parameters, adds them together, and returns the sum. Call the function in `Start()` and print the result using `Debug.Log`.  
+**Description**: Write a function in C# that takes two integers as parameters, adds them together, and returns the sum. Call the function in `Start()` and print the result using `System.Debug.WriteLn`.  
 **Difficulty**: Easy
 
 ---
 
 ### Exercise 5: Creating a Simple Class
-**Description**: Create a class called `Player` with fields for `name` (string), `health` (int), and `score` (int). In the `Start()` method of a script, create an instance of `Player`, set its values, and print them using `Debug.Log`.  
+**Description**: Create a class called `Player` with fields for `name` (string), `health` (int), and `score` (int). In the `Start()` method of a script, create an instance of `Player`, set its values, and print them using `System.Debug.WriteLn`.  
 **Difficulty**: Medium
 
 ```mermaid
