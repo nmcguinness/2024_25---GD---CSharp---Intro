@@ -2,7 +2,7 @@
 
 ### Week 1
 - [ ] Add `namespace`, static demos
-- [ ] Use `ref` in a function call (see Program)
+- [ ] Use `ref` and `out` in a function call (see Program)
 - [ ] Add demo class(es) (see Vector3, Player, PlayerList)
 - [ ] Add `constructor chaining` (see Vector3)
 - [ ] Add `properties` (set/get) (see Vector3)
