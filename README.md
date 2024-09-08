@@ -182,8 +182,8 @@ classDiagram
         - string name
         - int health
         - int score
-        + int Health { get; set; }
-        + int Score { get; set; }
+        + int Health (get,set)
+        + int Score (get, set)
         + TakeDamage(int damage)
         + Player(string name, int health, int score)
     }
@@ -216,7 +216,7 @@ classDiagram
         + TakeDamage(int damage)
     }
     Enemy <|-- BossEnemy
-
+```
 
 
 
