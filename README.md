@@ -9,7 +9,8 @@ This repository contains code samples used to learn the basics of C# in preparat
 ## C# for Game Development
 
 | #  | Completed | Topic                            | Description                                                                 | Recommended Reading                                                                                           |
-|----|:---------:|----------------------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+|:---|:---------:|:---------------------------------|:----------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|
+| 1  | <ul><li>- [ ] </li></ul> | **Namespace Definition**                  | Organizing game code using namespaces to prevent conflicts.                 | [Namespace](https://www.tutorialspoint.com/csharp/csharp_namespaces.htm
 | 1  | <ul><li>- [ ] </li></ul> | **Namespace Definition**                  | Organizing game code using namespaces to prevent conflicts.                 | [Namespace](https://www.tutorialspoint.com/csharp/csharp_namespaces.htm)                                       |
 | 2  | <ul><li>- [ ] </li></ul> | **Value and Reference Types**             | Managing memory in Unity by understanding value and reference types.        | [Value type and Reference type](https://www.tutorialsteacher.com/csharp/csharp-value-type-and-reference-type)  |
 | 4  | <ul><li>- [ ] </li></ul> | **Class Definition & Inheritance**        | Class structures, inheritance, and polymorphism in game development.        | [Class & Object](https://www.geeksforgeeks.org/c-sharp-class-and-object/)                                      |
@@ -24,7 +25,8 @@ This repository contains code samples used to learn the basics of C# in preparat
 ## C# Memory & Performance
 
 | #  | Completed | Topic                            | Description                                                                 | Recommended Reading                                                                                           |
-|----|:---------:|----------------------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+|:---|:---------:|:---------------------------------|:----------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|
+| 1  | <ul><li>- [ ] </li></ul> | **Namespace Definition**                  | Organizing game code using namespaces to prevent conflicts.                 | [Namespace](https://www.tutorialspoint.com/csharp/csharp_namespaces.htm
 | 3  | <ul><li>- [ ] </li></ul> | **Keywords (ref, out)**                   | Use of `ref` and `out` to optimize memory in functions.                     | [ref](https://www.geeksforgeeks.org/ref-in-c-sharp/), [out](https://www.geeksforgeeks.org/out-parameter-with-examples-in-c-sharp/) |
 | 22 | <ul><li>- [ ] </li></ul> | **Garbage Collection & Memory Management** | Understanding C# garbage collection to avoid performance issues.            | [Garbage Collection in Unity](https://docs.unity3d.com/Manual/performance-garbage-collector.html)              |
 | 23 | <ul><li>- [ ] </li></ul> | **Game Optimization & Profiling**         | Using Unity's profiler to optimize code and memory usage in games.          | [Unity Profiler](https://docs.unity3d.com/Manual/Profiler.html)                                                |
@@ -32,7 +34,8 @@ This repository contains code samples used to learn the basics of C# in preparat
 ## Advanced C# Techniques
 
 | #  | Completed | Topic                            | Description                                                                 | Recommended Reading                                                                                           |
-|----|:---------:|----------------------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+|:---|:---------:|:---------------------------------|:----------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|
+| 1  | <ul><li>- [ ] </li></ul> | **Namespace Definition**                  | Organizing game code using namespaces to prevent conflicts.                 | [Namespace](https://www.tutorialspoint.com/csharp/csharp_namespaces.htm
 | 13 | <ul><li>- [ ] </li></ul> | **Delegates & Events in Unity**           | Implementing event-driven gameplay using C# delegates and events.           | [Delegate](https://www.tutorialsteacher.com/csharp/csharp-delegates), [Event](https://www.tutorialspoint.com/csharp/csharp_events.htm) |
 | 14 | <ul><li>- [ ] </li></ul> | **Func & Action**                         | Passing game logic as parameters for AI or state machines.                  | [Func](https://www.tutorialsteacher.com/csharp/csharp-func-delegate), [Action](https://www.tutorialsteacher.com/csharp/csharp-action-delegate) |
 | 15 | <ul><li>- [ ] </li></ul> | **Predicate & Lambda Expressions**        | Using `Predicate` and Lambda Expressions to filter and find game objects.   | [Predicate](https://www.tutorialsteacher.com/csharp/csharp-predicate), [Lambda Expressions](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions) |
