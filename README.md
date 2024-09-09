@@ -20,6 +20,8 @@ This repository contains code samples used to learn the basics of C# in preparat
 | 16 | <ul><li>- [ ] </li></ul> | **Operator Overloading**                  | Overloading operators for custom operations in game physics or math.        | [Operator Overloading](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading) |
 | 17 | <ul><li>- [ ] </li></ul> | **Indexers**                              | Simplifying access to collections in game classes (e.g., inventory).        | [Indexers](https://www.tutorialspoint.com/csharp/csharp_indexers.htm)                                          |
 | 19 | <ul><li>- [ ] </li></ul> | **Shallow vs Deep Copy**                  | Handling object references and copies.                                      | [Shallow vs Deep Copy](https://www.geeksforgeeks.org/shallow-copy-and-deep-copy-in-c-sharp/)                   |
+| 11 | <ul><li>- [ ] </li></ul> | **Containers (List, Array)**              | Managing collections of game objects using `List<T>` and arrays in Unity.   | [C# List Tutorial](https://www.c-sharpcorner.com/article/c-sharp-list/)                                        |
+| 12 | <ul><li>- [ ] </li></ul> | **SortedList & Dictionary**               | Using `SortedList` and `Dictionary` for quick lookups in games.             | [SortedList](https://www.tutorialspoint.com/csharp/csharp_collections.htm)                                     |
 
 ## C# Memory & Performance
 
@@ -44,8 +46,6 @@ This repository contains code samples used to learn the basics of C# in preparat
 | #  | Completed | Topic                            | Description                                                                 | Recommended Reading                                                                                           |
 |----|:---------:|----------------------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | 10 | <ul><li>- [ ] </li></ul> | **MonoBehaviour, Update, Start**          | Overview of MonoBehaviour, Update, and Start methods in Unity.              | [Unity Scripting Reference](https://docs.unity3d.com/ScriptReference/)                                         |
-| 11 | <ul><li>- [ ] </li></ul> | **Containers (List, Array)**              | Managing collections of game objects using `List<T>` and arrays in Unity.   | [C# List Tutorial](https://www.c-sharpcorner.com/article/c-sharp-list/)                                        |
-| 12 | <ul><li>- [ ] </li></ul> | **SortedList & Dictionary**               | Using `SortedList` and `Dictionary` for quick lookups in games.             | [SortedList](https://www.tutorialspoint.com/csharp/csharp_collections.htm)                                     |
 
 ## Miscellaneous Techniques
 
