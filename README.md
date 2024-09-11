@@ -1,4 +1,4 @@
-# 2024 - 25 - GD - C# Concepts for Game Developers 
+# 2024 - 25 - GD - C# Concepts for Game Developers in GD3
 
 ## Overview 
 

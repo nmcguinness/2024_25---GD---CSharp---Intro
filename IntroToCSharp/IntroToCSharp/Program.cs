@@ -2,9 +2,11 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            // Start the program for each group - disable the group you are not working in
+            GD3A.Launcher.Start("GD3A");
+            GD3B.Launcher.Start("GD3B");
         }
     }
 }

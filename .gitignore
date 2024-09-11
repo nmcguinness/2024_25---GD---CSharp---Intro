@@ -2,6 +2,11 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
+
+# Compiled output sub-folders 
+*/IntroToCSharp/bin/**/
+*/IntroToCSharp/obj/**/
+
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -34,7 +39,7 @@ ExportedObj/
 .consulo/
 *.csproj
 *.unityproj
-*.sln
+# *.sln
 *.suo
 *.tmp
 *.user
