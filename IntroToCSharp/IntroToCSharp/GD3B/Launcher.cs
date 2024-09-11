@@ -18,6 +18,17 @@ namespace IntroToCSharp.GD3B
             int x = 6;
             var z = 2 * x;
             Console.WriteLine(z);
+
+            Vector3 v1 = new Vector3(1, 2, 3);
+            Console.WriteLine(v1.ToString());
+            Console.WriteLine(v1);
+
+            Vector3 v2 = new Vector3(1, 2, 3);
+            Console.WriteLine(v1.Equals(v2));
+
+            v2.X = 1000; //change x value using property
+            Console.WriteLine(v1.Equals(v2));
+            Console.WriteLine(v1.X); //access x value using property
         }
     }
 }
