@@ -7,9 +7,22 @@
     {
         #region Instance Variables
 
-        public float x, y, z;
+        private float x, y, z;
 
         #endregion Instance Variables
+
+        #region Properties
+
+        public float X
+        {
+            get { return x; }
+            set { x = value; }
+        }
+
+        public float Y { get => y; set => y = value; }
+        public float Z { get => z; set => z = value; }
+
+        #endregion Properties
 
         #region Instance Methods
 
