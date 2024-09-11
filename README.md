@@ -67,9 +67,9 @@ This repository contains code samples used to learn the basics of C# in preparat
 ## Exercises
 
 - [Namespace Definition](Exercises/Namespace%20Definition.md)
+- [Class Definition & Inheritance](Exercises/Class%20Definition%20&%20Inheritance.md)
 - [Value & Reference Types](Exercises/Value%20and%20Reference%20Types.md)
 - [Keywords](Exercises/Keywords.md)
-- [Class Definition & Inheritance](Exercises/Class%20Definition%20&%20Inheritance.md)
 - [Structs and Enums](Exercises/Structs%20and%20Enums.md)
 
 ## Tools & Tips
