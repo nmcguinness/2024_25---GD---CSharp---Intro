@@ -2,10 +2,16 @@
 {
     internal class Weapon
     {
+        #region Instance Variables
+
         public bool IsEquipped;
         public string name;
         public float damage;
         public int ammoCount;
+
+        #endregion Instance Variables
+
+        #region Constructors
 
         public Weapon()  //default constructor
         {
@@ -23,5 +29,11 @@
             this.ammoCount = ammoCount;
             this.IsEquipped = IsEquipped;
         }
+
+        #endregion Constructors
+
+        //TODO - NMCG - Add ToString, Equals, Properties
+
+        //RFR - NMCG - Make this run within 60-80 FPS
     }
 }
