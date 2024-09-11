@@ -1,15 +1,21 @@
 ﻿/// GD3A specific code should be placed in this namespace.
-namespace IntroToCSharp.GD3A
+namespace IntroToCSharp
 {
-    internal class Launcher
+    namespace GD3A
     {
-        /// <summary>
-        /// Insertion point for GD3A code.
-        /// </summary>
-        /// <param name="groupName">Group identifier</param>
-        public static void Start(string groupName)
+        internal class Launcher
         {
-            Console.WriteLine("Hello, World!");
+            /// <summary>
+            /// Insertion point for GD3A code.
+            /// </summary>
+            /// <par4m name="groupName">Group identifier</param>
+            public static void Start(string groupName)
+            {
+                Console.WriteLine("Hello, World!");
+                int x = 6;
+                var z = 2 * x;
+                Console.WriteLine(z);
+            }
         }
     }
 }

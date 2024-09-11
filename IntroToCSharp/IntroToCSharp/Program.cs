@@ -4,9 +4,13 @@
     {
         private static void Main(string[] args)
         {
+            bool bGroupA = true;
+
             // Start the program for each group - disable the group you are not working in
-            GD3A.Launcher.Start("GD3A");
-            GD3B.Launcher.Start("GD3B");
+            if (bGroupA)
+                GD3A.Launcher.Start("GD3A");
+            else
+                GD3B.Launcher.Start("GD3B");
         }
     }
 }
