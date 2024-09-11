@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-/// GD3B specific code should be placed in this namespace.
+﻿/// GD3B specific code should be placed in this namespace.
 namespace IntroToCSharp.GD3B
 {
     internal class Launcher
@@ -28,7 +26,15 @@ namespace IntroToCSharp.GD3B
 
             v2.X = 1000; //change x value using property
             Console.WriteLine(v1.Equals(v2));
-            Console.WriteLine(v1.X); //access x value using property
+            Console.WriteLine(v2.X); //access x value using property
+
+            //TODO - NMCG - Override operator ==
+            bool areEqual = v1 == v2;
+            Console.WriteLine(areEqual);
+            Console.WriteLine(v1 == v2);
+
+            //BUG - NMCG - Does equals always work?
+            var t = 10;
         }
     }
 }
