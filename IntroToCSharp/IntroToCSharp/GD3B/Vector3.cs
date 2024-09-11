@@ -37,5 +37,17 @@
         }
 
         #endregion Instance Methods
+
+        public override string ToString()
+        {
+            return x + ", " + y + ", " + z;
+        }
+
+        public bool Equals(Vector3 other)
+        {
+            return x == other.x
+                && y == other.y
+                && z == other.z;
+        }
     }
 }
