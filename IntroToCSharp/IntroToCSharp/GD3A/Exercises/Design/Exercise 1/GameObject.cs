@@ -6,14 +6,16 @@
         public bool isActive;
         public float x, y, z;
 
+        public GameObject() : this("Default", false, 0, 0, 0)
+        {
+        }
+
         public GameObject(string iD, bool isActive,
             float x, float y, float z)
         {
             ID = iD;
             this.isActive = isActive;
-            this.x = x;
-            this.y = y;
-            this.z = z;
+            this.x = x; this.y = y; this.z = z;
         }
     }
 }
