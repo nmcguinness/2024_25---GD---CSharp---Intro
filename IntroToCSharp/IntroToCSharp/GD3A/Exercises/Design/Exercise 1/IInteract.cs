@@ -25,6 +25,7 @@
                 return false;
 
             player.health -= 10;
+            player.y += 100;
             return true;
         }
     }

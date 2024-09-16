@@ -1,6 +1,9 @@
-**Design Exercise 1**
 
-A player can encounter obstacles/threats/enemies of different types in a game and each threat can modify the player in the following ways:
+## Exercises  - Design Exercises
+
+### Exercise 1: Using interfaces to simplify Player mods
+
+**Description**: A player can encounter obstacles/threats/enemies of different types in a game and each threat can modify the player in the following ways:
 - lava pit that reduces `health`
 - laughing gas that temporarily increases `resistance`
 - depress your `mood`
