@@ -1,4 +1,8 @@
-﻿/// GD3B specific code should be placed in this namespace.
+﻿using IntroToCSharp.GD3B.Exercises;
+
+using IntroToCSharp.GD3B.Exercises;
+
+/// GD3B specific code should be placed in this namespace.
 namespace IntroToCSharp.GD3B
 {
     internal class Launcher
@@ -35,7 +39,16 @@ namespace IntroToCSharp.GD3B
 
         private void DemoInheritance()
         {
-            //  throw new NotImplementedException();
+            GameObject go1 = new GameObject("go1", true, new Vector3(0, 0, 0));
+            Console.WriteLine(go1);
+
+            Player p1 = new Player("max", true, new Vector3(0, 10, 0),
+                                                            100, 25.5f);
+            Console.WriteLine(p1);
+
+            Weapon w1 = new Weapon("plasma rifle",
+                                true, new Vector3(10, 10, 0), 10);
+            Console.WriteLine(w1);
         }
 
         private void DemoInterfaces()
