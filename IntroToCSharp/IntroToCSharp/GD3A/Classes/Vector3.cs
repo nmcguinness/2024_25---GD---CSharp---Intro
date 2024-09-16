@@ -1,4 +1,4 @@
-﻿namespace IntroToCSharp.GD3A
+﻿namespace IntroToCSharp.GD3A.Classes
 {
     /// <summary>
     /// Represents a 3D vector.

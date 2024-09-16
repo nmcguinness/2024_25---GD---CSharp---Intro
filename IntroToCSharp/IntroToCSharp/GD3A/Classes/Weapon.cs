@@ -1,6 +1,6 @@
 ﻿using IntroToCSharp.GD3A.Utilities;
 
-namespace IntroToCSharp.GD3A
+namespace IntroToCSharp.GD3A.Classes
 {
     internal class Weapon
     {
@@ -17,10 +17,10 @@ namespace IntroToCSharp.GD3A
 
         public Weapon()  //default constructor
         {
-            this.ammoCount = 10;
-            this.damage = 100;
-            this.name = "Default Weapon";
-            this.IsEquipped = false;
+            ammoCount = 10;
+            damage = 100;
+            name = "Default Weapon";
+            IsEquipped = false;
         }
 
         public Weapon(string name, float damage,
@@ -43,7 +43,7 @@ namespace IntroToCSharp.GD3A
 
         public bool Equals(Weapon other)
         {
-            return MathUtility.AreEqualWithin(this.damage,
+            return MathUtility.AreEqualWithin(damage,
                 other.damage, MathUtility.FLOAT_TOLERANCE);
 
             //MathUtility mathUtility = new MathUtility();

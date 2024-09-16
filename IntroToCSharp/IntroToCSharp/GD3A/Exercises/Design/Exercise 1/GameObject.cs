@@ -1,5 +1,8 @@
 ﻿namespace IntroToCSharp.GD3A.Exercises
 {
+    /// <summary>
+    /// Represents a base game object within our game
+    /// </summary>
     public class GameObject
     {
         public string ID;
@@ -16,6 +19,11 @@
             ID = iD;
             this.isActive = isActive;
             this.x = x; this.y = y; this.z = z;
+        }
+
+        public override string ToString()
+        {
+            return $"GameObject: {ID} at ({x}, {y}, {z})";
         }
     }
 }
