@@ -1,7 +1,7 @@
 
 ## Exercises  - Design Exercises
 
-### Exercise 1: Using an interface (IInteract) to simplify Player mods
+### Exercise 1: Using an interface (IModifyGameObject) to simplify Player mods
 
 **Description**: A player can encounter obstacles/threats/enemies of different types in a game and each threat can modify the player in the following ways:
 - lava pit that reduces `health`

@@ -5,7 +5,7 @@ namespace IntroToCSharp.GD3B
     /// <summary>
     /// Represents a 3D vector.
     /// </summary>
-    internal class Vector3
+    public class Vector3
     {
         #region Instance Variables
 
@@ -47,14 +47,13 @@ namespace IntroToCSharp.GD3B
 
         public bool Equals(Vector3 other)
         {
-            //0.0001f == 0.00009999999f
-            //0.75, 0.74999, 0.74999998, 0.7500001
             //return x == other.x
             //    && y == other.y
             //    && z == other.z;
 
-            MathUtility mu = new MathUtility();
-            return mu.AreEqualWithin(this.x, other.x, 0.0001f);
+            return MathUtility.AreEqualWithin(this.x, other.x)
+                && MathUtility.AreEqualWithin(this.y, other.y)
+                && MathUtility.AreEqualWithin(this.z, other.z);
         }
 
         //public bool AreEqualWithin(float a, float b,
