@@ -49,6 +49,10 @@ namespace IntroToCSharp.GD3B
             Weapon w1 = new Weapon("plasma rifle",
                                 true, new Vector3(10, 10, 0), 10);
             Console.WriteLine(w1);
+
+            Console.WriteLine($"Before weapon: {p1}");
+            w1.Apply(p1);
+            Console.WriteLine($"After weapon: {p1}");
         }
 
         private void DemoInterfaces()
