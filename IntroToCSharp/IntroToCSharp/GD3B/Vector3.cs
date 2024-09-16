@@ -1,4 +1,6 @@
-﻿namespace IntroToCSharp.GD3B
+﻿using IntroToCSharp.GD3B.Utilities;
+
+namespace IntroToCSharp.GD3B
 {
     /// <summary>
     /// Represents a 3D vector.
@@ -45,9 +47,20 @@
 
         public bool Equals(Vector3 other)
         {
-            return x == other.x
-                && y == other.y
-                && z == other.z;
+            //0.0001f == 0.00009999999f
+            //0.75, 0.74999, 0.74999998, 0.7500001
+            //return x == other.x
+            //    && y == other.y
+            //    && z == other.z;
+
+            MathUtility mu = new MathUtility();
+            return mu.AreEqualWithin(this.x, other.x, 0.0001f);
         }
+
+        //public bool AreEqualWithin(float a, float b,
+        //    float epsilon) //0.000001f
+        //{
+        //    return Math.Abs(a - b) < epsilon;
+        //}
     }
 }
