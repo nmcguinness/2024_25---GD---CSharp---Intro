@@ -1,15 +1,6 @@
 ﻿namespace IntroToCSharp.GD3A.Exercises
 {
-    public interface IInteract
-    {
-        public bool Apply(GameObject obj);
-    }
-
-    //public class Pickup : GameObject, IInteract
-    //{
-    //}
-
-    public class Enemy : GameObject, IInteract
+    public class Enemy : GameObject, IModifyGameObject
     {
         public Enemy(string iD, bool isActive,
             float x, float y, float z, int health)
@@ -25,9 +16,7 @@
                 return false;
 
             player.health -= 10;
-            player.y += 100;
             return true;
         }
     }
-}
 }
