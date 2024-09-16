@@ -80,3 +80,7 @@ This repository contains code samples used to learn the basics of C# in preparat
 ## To Do 
 
 - [Weekly Development Plan](ToDo.md)
+
+## Design Exercises
+
+- [Design Exercises](Exercises/Design%20Exercises.md)
