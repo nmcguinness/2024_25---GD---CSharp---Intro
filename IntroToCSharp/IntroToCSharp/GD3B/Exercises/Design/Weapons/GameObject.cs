@@ -18,5 +18,12 @@
             this.isActive = isActive;
             this.position = position;
         }
+
+        public override string ToString()
+        {
+            // return "GameObject" + this.ID + " at " + this.position;
+
+            return $"GameObject: {ID} at {position} with isActive {isActive}";
+        }
     }
 }
