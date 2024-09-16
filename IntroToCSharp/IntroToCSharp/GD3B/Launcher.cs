@@ -12,29 +12,59 @@ namespace IntroToCSharp.GD3B
         /// <par4m name="groupName">Group identifier</param>
         public static void Start(string ID = "GD")
         {
-            Console.WriteLine("Hello, World!");
-            int x = 6;
-            var z = 2 * x;
-            Console.WriteLine(z);
+            Launcher launcher = new Launcher();
+            launcher.StartDemos();
+        }
 
+        public void StartDemos()
+        {
+            DemoClasses();
+            DemoInheritance();
+            DemoInterfaces();
+        }
+
+        private void DemoClasses()
+        {
+            //  throw new NotImplementedException();
             Vector3 v1 = new Vector3(1, 2, 3);
-            Console.WriteLine(v1.ToString());
+            Vector3 v2 = new Vector3(10, 20, 30);
+
             Console.WriteLine(v1);
-
-            Vector3 v2 = new Vector3(1, 2, 3);
             Console.WriteLine(v1.Equals(v2));
+        }
 
-            v2.X = 1000; //change x value using property
-            Console.WriteLine(v1.Equals(v2));
-            Console.WriteLine(v2.X); //access x value using property
+        private void DemoInheritance()
+        {
+            //  throw new NotImplementedException();
+        }
 
-            //TODO - NMCG - Override operator ==
-            bool areEqual = v1 == v2;
-            Console.WriteLine(areEqual);
-            Console.WriteLine(v1 == v2);
-
-            //BUG - NMCG - Does equals always work?
-            var t = 10;
+        private void DemoInterfaces()
+        {
+            //  throw new NotImplementedException();
         }
     }
 }
+
+//Console.WriteLine("Hello, World!");
+//int x = 6;
+//var z = 2 * x;
+//Console.WriteLine(z);
+
+//Vector3 v1 = new Vector3(1, 2, 3);
+//Console.WriteLine(v1.ToString());
+//Console.WriteLine(v1);
+
+//Vector3 v2 = new Vector3(1, 2, 3);
+//Console.WriteLine(v1.Equals(v2));
+
+//v2.X = 1000; //change x value using property
+//Console.WriteLine(v1.Equals(v2));
+//Console.WriteLine(v2.X); //access x value using property
+
+////TODO - NMCG - Override operator ==
+//bool areEqual = v1 == v2;
+//Console.WriteLine(areEqual);
+//Console.WriteLine(v1 == v2);
+
+////BUG - NMCG - Does equals always work?
+//var t = 10;
