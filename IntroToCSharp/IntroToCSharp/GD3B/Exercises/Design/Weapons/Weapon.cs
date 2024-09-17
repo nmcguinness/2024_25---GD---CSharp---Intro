@@ -2,15 +2,13 @@
 {
     public class Weapon : GameObject
     {
-        public int damage;
         public IApplyDamage applyDamage;
 
         public Weapon(string iD, bool isActive,
-                       Vector3 position, int damage,
+                       Vector3 position,
                        IApplyDamage applyDamage)
             : base(iD, isActive, position)
         {
-            this.damage = damage;
             this.applyDamage = applyDamage;
         }
 
@@ -33,7 +31,7 @@
 
         public override string ToString()
         {
-            return $"Weapon: {ID} at {position} with {damage} damage";
+            return $"Weapon: {ID} at {position}";
         }
     }
 }
