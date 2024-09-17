@@ -89,9 +89,6 @@ namespace IntroToCSharp.GD3B
 
             Console.WriteLine(strList[0]);
             Console.WriteLine(strList.Count);
-            strList.RemoveAt(1);
-            strList.Remove("kiwi");
-            strList.Clear();
 
             for (int i = 0; i < strList.Count; i++)
                 Console.WriteLine(strList[i]);
@@ -99,7 +96,35 @@ namespace IntroToCSharp.GD3B
             foreach (string s in strList)
                 Console.WriteLine(s);
 
-            //interface demo
+            strList.RemoveAt(1);
+            Console.WriteLine(strList.Remove("kiwi"));
+            strList.Clear();
+
+            List<int> ageList = new List<int>
+            {
+                21, 19, 24, 32, 18, 27, 22
+            };
+
+            //print in reverse order
+            for (int i = ageList.Count - 1; i >= 0; i--)
+                Console.WriteLine(ageList[i]);
+
+            //sort
+            ageList.Sort();
+
+            foreach (int age in ageList)
+                Console.WriteLine(age);
+
+            //class demo
+            List<Player> pList = new List<Player>
+            {
+                new Player("anna", true, new Vector3(0, 10, 0), 100, 5),
+                new Player("bob", true, new Vector3(0, 40, 0), 50, 2),
+                new Player("ciara", true, new Vector3(0, 60, 0), 25, 1)
+            };
+
+            foreach (Player p in pList)
+                Console.WriteLine(p);
         }
     }
 }
