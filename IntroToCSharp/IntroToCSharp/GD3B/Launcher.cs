@@ -36,6 +36,9 @@ namespace IntroToCSharp.GD3B
 
             Console.WriteLine("\n****DemoListInterfaces****\n");
             DemoListInterfaces();
+
+            Console.WriteLine("\n****DemoPredicate****\n");
+            DemoPredicate();
         }
 
         private void DemoClasses()
@@ -82,6 +85,39 @@ namespace IntroToCSharp.GD3B
             //Console.WriteLine(p1);
             //w1.DoDamage(p1);
             //Console.WriteLine(p1);
+        }
+
+        private void DemoPredicate()
+        {
+            List<int> skillsList = new List<int>
+            {
+                150, 22, 45, 65, 220, 85
+            };
+
+            List<int> list1 = skillsList.FindAll(IsHighlySkilled);
+
+            foreach (int skill in list1)
+                Console.WriteLine(skill);
+
+            int skillThreshold = 200;
+            Predicate<int> skillsPred = (value) => value > skillThreshold;
+            List<int> list2 = skillsList.FindAll(skillsPred);
+            foreach (int skill in list2)
+                Console.WriteLine(skill);
+
+            List<string> nationalities = new List<string>
+            {
+                "IE", "UK", "US", "FR", "DE", "ES", "IE", "UK"
+            };
+
+            Predicate<string> natPred = (nationality) => nationality == "IE";
+            List<string> list3 = nationalities.FindAll(natPred);
+            Console.WriteLine($"There are {list3.Count} IE students");
+        }
+
+        private bool IsHighlySkilled(int skill)
+        {
+            return skill > 100;
         }
 
         private void DemoListInterfaces()

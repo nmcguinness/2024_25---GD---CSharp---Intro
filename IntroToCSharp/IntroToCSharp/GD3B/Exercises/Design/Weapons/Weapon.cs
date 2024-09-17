@@ -13,6 +13,8 @@
             this.applyDamageList = applyDamageList;
         }
 
+        //TODO - ALL - Add DoRandomDamage method
+
         public void DoDamage(GameObject obj)
         {
             foreach (IApplyDamage applyDamage in applyDamageList)
