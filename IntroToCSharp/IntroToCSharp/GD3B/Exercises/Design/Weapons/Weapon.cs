@@ -13,7 +13,7 @@
 
         public bool Apply(GameObject obj)
         {
-            Player p = obj as Player;
+            Player? p = obj as Player;
 
             if (p == null)
                 return false;
