@@ -2,19 +2,21 @@
 {
     public class Weapon : GameObject
     {
-        public IApplyDamage applyDamage;
+        // public IApplyDamage applyDamage;
+        private List<IApplyDamage> applyDamageList;
 
         public Weapon(string iD, bool isActive,
                        Vector3 position,
-                       IApplyDamage applyDamage)
+                       List<IApplyDamage> applyDamageList)
             : base(iD, isActive, position)
         {
-            this.applyDamage = applyDamage;
+            this.applyDamageList = applyDamageList;
         }
 
         public void DoDamage(GameObject obj)
         {
-            applyDamage.Apply(obj);
+            foreach (IApplyDamage applyDamage in applyDamageList)
+                applyDamage.Apply(obj);
         }
 
         //public bool Apply(GameObject obj)
