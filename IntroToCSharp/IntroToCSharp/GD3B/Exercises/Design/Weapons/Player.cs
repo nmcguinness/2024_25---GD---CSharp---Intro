@@ -19,7 +19,7 @@ namespace IntroToCSharp.GD3B.Exercises
         public override string ToString()
         {
             return $"Player: {ID} at {position} with {health} health" +
-                $"and {moveSpeed} move speed";
+                $" and {moveSpeed} move speed";
         }
     }
 }
