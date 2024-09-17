@@ -107,12 +107,14 @@ namespace IntroToCSharp.GD3B
 
             List<string> nationalities = new List<string>
             {
-                "IE", "UK", "US", "FR", "DE", "ES", "IE", "UK"
+                "IE", "UK", "US", "FR", "DE", "ES", "IE", "UK", "IE"
             };
 
             Predicate<string> natPred = (nationality) => nationality == "IE";
             List<string> list3 = nationalities.FindAll(natPred);
             Console.WriteLine($"There are {list3.Count} IE students");
+
+            //TODO - All - Create a list of players and predicate to filter out health > 50
         }
 
         private bool IsHighlySkilled(int skill)
