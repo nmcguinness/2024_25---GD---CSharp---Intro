@@ -22,9 +22,17 @@ namespace IntroToCSharp.GD3B
 
         public void StartDemos()
         {
+            Console.WriteLine("\n****DemoClasses****\n");
             DemoClasses();
+
+            Console.WriteLine("\n****DemoInheritance****\n");
             DemoInheritance();
+
+            Console.WriteLine("\n****DemoInterfaces****\n");
             DemoInterfaces();
+
+            Console.WriteLine("\n****DemoList****\n");
+            DemoList();
         }
 
         private void DemoClasses()
@@ -71,6 +79,27 @@ namespace IntroToCSharp.GD3B
             Console.WriteLine(p1);
             w1.DoDamage(p1);
             Console.WriteLine(p1);
+        }
+
+        private void DemoList()
+        {
+            //simple demo
+            List<string> strList = new List<string>();
+            strList.Add("apple"); strList.Add("banana"); strList.Add("kiwi");
+
+            Console.WriteLine(strList[0]);
+            Console.WriteLine(strList.Count);
+            strList.RemoveAt(1);
+            strList.Remove("kiwi");
+            strList.Clear();
+
+            for (int i = 0; i < strList.Count; i++)
+                Console.WriteLine(strList[i]);
+
+            foreach (string s in strList)
+                Console.WriteLine(s);
+
+            //interface demo
         }
     }
 }
