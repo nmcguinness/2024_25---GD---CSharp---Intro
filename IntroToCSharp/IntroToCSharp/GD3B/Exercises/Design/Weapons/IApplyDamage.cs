@@ -1,4 +1,6 @@
-﻿namespace IntroToCSharp.GD3B.Exercises
+﻿using System.Numerics;
+
+namespace IntroToCSharp.GD3B.Exercises
 {
     /// <summary>
     /// Contract where any implementing class implements the methods
@@ -10,6 +12,13 @@
 
     public class ApplySpeedDamage : IApplyDamage
     {
+        private float speedModifier;
+
+        public ApplySpeedDamage(float speedModifier)
+        {
+            this.speedModifier = speedModifier;
+        }
+
         public bool Apply(GameObject obj)
         {
             Player? p = obj as Player;
@@ -17,13 +26,20 @@
             if (p == null)
                 return false;
 
-            p.moveSpeed *= 0.8f; //0.8f
+            p.moveSpeed *= speedModifier; //0.8f
             return true;
         }
     }
 
     public class ApplyHealthDamage : IApplyDamage
     {
+        private int healthDamage;
+
+        public ApplyHealthDamage(int healthDamage)
+        {
+            this.healthDamage = healthDamage;
+        }
+
         public bool Apply(GameObject obj)
         {
             Player? p = obj as Player;
@@ -31,7 +47,7 @@
             if (p == null)
                 return false;
 
-            p.health -= 10;
+            p.health -= healthDamage;
             return true;
         }
     }
