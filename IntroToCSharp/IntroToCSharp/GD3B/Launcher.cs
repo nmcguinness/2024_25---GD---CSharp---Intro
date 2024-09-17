@@ -57,14 +57,18 @@ namespace IntroToCSharp.GD3B
 
         private void DemoInterfaces()
         {
-            IApplyDamage applyHealthDamage = new ApplyHealthDamage();
+            IApplyDamage applyDamage = new ApplySpeedDamage();
             Weapon w1 = new Weapon("health killer rifle", true,
                         new Vector3(10, 10, 0), 10,
-                        applyHealthDamage);
+                        applyDamage);
 
             Player p1 = new Player("max", true, new Vector3(0, 10, 0),
                                           100, 25.5f);
 
+            Console.WriteLine(p1);
+            w1.DoDamage(p1);
+            Console.WriteLine(p1);
+            w1.DoDamage(p1);
             Console.WriteLine(p1);
             w1.DoDamage(p1);
             Console.WriteLine(p1);
