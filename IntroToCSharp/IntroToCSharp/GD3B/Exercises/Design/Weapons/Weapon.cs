@@ -4,16 +4,37 @@
 
     public class Weapon : GameObject
     {
-        // public IApplyDamage applyDamage;
+        #region Fields
+
         private List<IApplyDamage> applyDamageList;
 
+        #endregion Fields
+
+        #region Properties
+
+        public List<IApplyDamage> DamageList
+        {
+            get
+            {
+                return this.applyDamageList;
+            }
+        }
+
+        #endregion Properties
+
+        #region Constructor
+
         public Weapon(string iD, bool isActive,
-                       Vector3 position,
-                       List<IApplyDamage> applyDamageList)
-            : base(iD, isActive, position)
+                     Vector3 position,
+                     List<IApplyDamage> applyDamageList)
+          : base(iD, isActive, position)
         {
             this.applyDamageList = applyDamageList;
         }
+
+        #endregion Constructor
+
+        #region Entity Specific
 
         //TODO - ALL - Add DoRandomDamage method
 
@@ -23,22 +44,16 @@
                 applyDamage.Apply(obj);
         }
 
-        //public bool Apply(GameObject obj)
-        //{
-        //    Player? p = obj as Player;
+        #endregion Entity Specific
 
-        //    if (p == null)
-        //        return false;
-        //    else
-        //        p.health -= damage;
-
-        //    return true;
-        //}
+        #region General - Housekeeping
 
         public override string ToString()
         {
-            return $"Weapon: {ID1} at {Position}";
+            return $"Weapon: {ID} at {Position}";
         }
+
+        #endregion General - Housekeeping
     }
 
     /*************************** VERSION 2 ***************************/
