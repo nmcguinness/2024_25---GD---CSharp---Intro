@@ -8,6 +8,9 @@
 
         private List<IApplyDamage> applyDamageList;
 
+        //  int seed = DateTime.Now.Millisecond;
+        private Random rand = new Random(DateTime.Now.Millisecond);
+
         #endregion Fields
 
         #region Properties
@@ -37,6 +40,14 @@
         #region Entity Specific
 
         //TODO - ALL - Add DoRandomDamage method
+        public void DoRandomDamage(GameObject obj)
+        {
+            int randDamage = rand.Next(0, applyDamageList.Count); //Count = 2 => 0, 1
+
+            IApplyDamage applyDamage = applyDamageList[randDamage];
+
+            applyDamage.Apply(obj);
+        }
 
         public void DoDamage(GameObject obj)
         {
