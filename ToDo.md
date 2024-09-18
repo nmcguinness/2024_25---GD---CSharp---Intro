@@ -10,7 +10,7 @@
 - [x] Add task list annotations (TODO, BUG, REFACTOR)
 
 ### Week 2
-- [ ] Add static methods
+- [x] Add static methods
 - [ ] Use `ref` and `out` in a function call (see Program)
 - [ ] Add demo class(es) (see Player, PlayerList)
 - [ ] Add `constructor chaining` (see Vector3)

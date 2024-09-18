@@ -1,4 +1,6 @@
-﻿namespace IntroToCSharp.GD3B.Exercises
+﻿using IntroToCSharp.Common.Utilities;
+
+namespace IntroToCSharp.Common.Exercise2
 {
     /*************************** VERSION 3 ***************************/
 

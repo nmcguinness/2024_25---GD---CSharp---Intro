@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Scratch\" />
+    <Folder Include="Common\Scratch\" />
   </ItemGroup>
 
 </Project>

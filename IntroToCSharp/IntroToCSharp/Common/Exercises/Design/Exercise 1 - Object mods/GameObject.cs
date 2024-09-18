@@ -1,4 +1,4 @@
-﻿namespace IntroToCSharp.GD3A.Exercises
+﻿namespace IntroToCSharp.Common.Exercise1
 {
     /// <summary>
     /// Represents a base game object within our game

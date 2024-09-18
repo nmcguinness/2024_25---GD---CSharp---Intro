@@ -1,6 +1,4 @@
-﻿using System.Numerics;
-
-namespace IntroToCSharp.GD3B.Exercises
+﻿namespace IntroToCSharp.Common.Exercise2
 {
     /// <summary>
     /// Contract where any implementing class implements the methods

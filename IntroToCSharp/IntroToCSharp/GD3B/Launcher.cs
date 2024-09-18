@@ -1,21 +1,18 @@
-﻿using IntroToCSharp.GD3B.Exercises;
-
-using IntroToCSharp.GD3B.Exercises;
+﻿using IntroToCSharp.Common.Exercise2;
+using IntroToCSharp.Common.Utilities;
 
 /// GD3B specific code should be placed in this namespace.
 namespace IntroToCSharp.GD3B
 {
     internal class Launcher
     {
-        //shared by all instances of Launcher
-        public static string ID;
-
         /// <summary>
         /// Insertion point for GD3A code.
         /// </summary>
         /// <par4m name="groupName">Group identifier</param>
-        public static void Start(string ID = "GD")
+        public static void Start(string groupName)
         {
+            Console.WriteLine($"\n************************** Group: {groupName} **************************\n");
             Launcher launcher = new Launcher();
             launcher.StartDemos();
         }
@@ -131,7 +128,7 @@ namespace IntroToCSharp.GD3B
             };
 
             Weapon w1 = new Weapon("health killer rifle", true,
-                                       new Vector3(10, 10, 0), damageList);
+                     new Vector3(10, 10, 0), damageList);
 
             Player p1 = new Player("max", true, new Vector3(0, 10, 0), 100, 50);
 

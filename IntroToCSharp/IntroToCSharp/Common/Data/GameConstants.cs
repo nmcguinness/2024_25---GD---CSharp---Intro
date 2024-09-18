@@ -1,10 +1,12 @@
-﻿namespace IntroToCSharp.GD3B.Data
+﻿using IntroToCSharp.Common.Utilities;
+
+namespace IntroToCSharp.Common.Data
 {
     /// <summary>
     /// Central storage for game constants.
     /// </summary>
-    /// <see cref="IntroToCSharp.GD3B.Exercises.Player"/>
-    /// <seealso cref="IntroToCSharp.GD3B.Exercises.Weapon"/>"/>
+    /// <see cref="IntroToCSharp.Common.Exercise2.Player"/>
+    /// <seealso cref="IntroToCSharp.Common.Exercise2.Weapon"/>"/>
     public static class GameConstants
     {
         public static readonly Vector3 PLAYER_START_POSITION = new Vector3(0, 0, 0);

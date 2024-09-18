@@ -75,11 +75,7 @@ This repository contains code samples used to learn the basics of C# in preparat
 
 ## Design Exercises
 
-- [Design Exercises](Exercises/Design%20Exercises.md)
-
-## Tools & Tips
-
-- [Markdown](https://docs.github.com/en/enterprise-cloud@latest/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) in GitHub
+- [Design Exercises](Exercises/Design%20Exercises.- [Markdown](https://docs.github.com/en/enterprise-cloud@latest/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) in GitHub
 - Add emojis with [gitmoji](https://gitmoji.dev/) to your Git commits to improve readability
 
 ## To Do 

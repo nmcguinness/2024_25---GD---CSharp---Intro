@@ -1,6 +1,7 @@
-﻿using IntroToCSharp.GD3B.Data;
+﻿using IntroToCSharp.Common.Data;
+using IntroToCSharp.Common.Utilities;
 
-namespace IntroToCSharp.GD3B.Exercises
+namespace IntroToCSharp.Common.Exercise2
 {
     public class Player : GameObject
     {

@@ -1,4 +1,4 @@
-﻿namespace IntroToCSharp.GD3A.Utilities
+﻿namespace IntroToCSharp.Common.Utilities
 {
     public static class MathUtility
     {

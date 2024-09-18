@@ -1,4 +1,4 @@
-﻿using IntroToCSharp.GD3A.Utilities;
+﻿using IntroToCSharp.Common.Utilities;
 
 namespace IntroToCSharp.GD3A.Classes
 {

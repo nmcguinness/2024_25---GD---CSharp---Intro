@@ -1,6 +1,4 @@
-﻿using IntroToCSharp.GD3B.Utilities;
-
-namespace IntroToCSharp.GD3B
+﻿namespace IntroToCSharp.Common.Utilities
 {
     /// <summary>
     /// Represents a 3D vector.

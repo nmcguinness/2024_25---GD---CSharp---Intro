@@ -1,4 +1,4 @@
-﻿using IntroToCSharp.GD3A.Exercises;
+﻿using IntroToCSharp.Common.Exercise1;
 
 /// GD3A specific code should be placed in this namespace.
 namespace IntroToCSharp
@@ -13,6 +13,7 @@ namespace IntroToCSharp
             /// <par4m name="groupName">Group identifier</param>
             public static void Start(string groupName)
             {
+                Console.WriteLine($"\n************************** Group: {groupName} **************************\n");
                 Launcher launcher = new Launcher();
                 launcher.StartDemos();
             }

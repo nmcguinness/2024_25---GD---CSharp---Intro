@@ -1,4 +1,6 @@
-﻿namespace IntroToCSharp.GD3B.Exercises
+﻿using IntroToCSharp.Common.Utilities;
+
+namespace IntroToCSharp.Common.Exercise2
 {
     public class GameObject
     {
@@ -28,7 +30,7 @@
         public GameObject(string iD, bool isActive,
             Vector3 position)
         {
-            ID1 = iD;
+            this.ID = iD;
             this.IsActive = isActive;
             this.Position = position;
         }
@@ -41,7 +43,7 @@
         {
             // return "GameObject" + this.ID + " at " + this.position;
 
-            return $"GameObject: {ID1} at {Position} with isActive {IsActive}";
+            return $"GameObject: {ID} at {Position} with isActive {IsActive}";
         }
 
         #endregion Methods - Housekeeping

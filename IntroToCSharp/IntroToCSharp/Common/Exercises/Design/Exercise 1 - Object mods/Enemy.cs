@@ -1,9 +1,9 @@
-﻿namespace IntroToCSharp.GD3A.Exercises
+﻿namespace IntroToCSharp.Common.Exercise1
 {
     /// <summary>
     /// Represents an enemy that can modify a game object
     /// </summary>
-    public class Enemy : GameObject, IModifyGameObject
+    public class Enemy : GameObject, IModifyObject
     {
         private readonly int RESPAWN_RATE_MS = 60000; // 1 minute = 60,000ms
         public int respawnAfterMSecs;
