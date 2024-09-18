@@ -1,4 +1,4 @@
-## Exercises  - Structs and Enums
+## Exercises - Structs and Enums
 
 ### Exercise 1: Basic Struct Definition
 

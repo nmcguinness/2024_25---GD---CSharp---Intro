@@ -1,4 +1,4 @@
-## Exercises  - Keywords
+## Exercises - Keywords
 
 ### Exercise 1: Passing by Reference Using `ref`
 **Description**: Create a method that uses the `ref` keyword to modify an `int` value inside the method. Show how it affects the original variable.  
