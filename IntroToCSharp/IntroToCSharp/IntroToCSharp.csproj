@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Common\Exercises\ListsAndPredicates\" />
     <Folder Include="Common\Scratch\" />
   </ItemGroup>
 

@@ -15,6 +15,38 @@ namespace IntroToCSharp.GD3B
             Console.WriteLine($"\n************************** Group: {groupName} **************************\n");
             Launcher launcher = new Launcher();
             launcher.StartDemos();
+
+            launcher.StartExercises();
+        }
+
+        public void StartExercises()
+        {
+            Console.WriteLine("\nLists & Predicates - Exercise 2...\n");
+
+            List<Player> playerList = new List<Player>
+            {
+                new Player("anna", true, new Vector3(0, 10, 0), 100, 5),
+                new Player("bob", true, new Vector3(0, 40, 0), 55, 2),
+                new Player("ciara", true, new Vector3(0, 60, 0), 25, 1)
+            };
+
+            Console.WriteLine("Enter a name to search for: ");
+            string searchName = Console.ReadLine();
+
+            Predicate<Player> idPred = (p) =>
+            {
+                return p.ID.Equals(searchName) && p.Health >= 20;
+            };
+
+            List<Player> searchResult = playerList.FindAll((p) => p.ID == searchName);
+            Console.WriteLine($"Count: {searchResult.Count}");
+            if (searchResult.Count > 0)
+                Console.WriteLine(searchResult[0]);
+        }
+
+        private bool IsRightPerson(Player p)
+        {
+            return p.ID.Equals("bob");
         }
 
         public void StartDemos()
