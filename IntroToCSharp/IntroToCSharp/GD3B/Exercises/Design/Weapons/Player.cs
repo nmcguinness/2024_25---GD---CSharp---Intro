@@ -4,13 +4,38 @@ namespace IntroToCSharp.GD3B.Exercises
 {
     public class Player : GameObject
     {
-        public int health;
-        public float moveSpeed;
+        #region Fields
+
+        private int health;
+        private float moveSpeed;
+
+        #endregion Fields
+
+        #region Properties
+
+        public int Health
+        {
+            get => health;
+            set => health = (value >= 0) ? value : 0;
+        }
+
+        public float MoveSpeed
+        {
+            get => moveSpeed;
+            set => moveSpeed = value <=
+                GameConstants.PLAYER_MAX_MOVE_SPEED ?
+                value :
+                GameConstants.PLAYER_MAX_MOVE_SPEED;
+        }
+
+        #endregion Properties
+
+        #region Constructors
 
         public Player(string iD)
-           : this(iD, true, GameConstants.PLAYER_START_POSITION,
-                 GameConstants.PLAYER_START_HEALTH,
-                 GameConstants.PLAYER_START_MOVE_SPEED)
+        : this(iD, true, GameConstants.PLAYER_START_POSITION,
+              GameConstants.PLAYER_START_HEALTH,
+              GameConstants.PLAYER_START_MOVE_SPEED)
         {
         }
 
@@ -19,14 +44,20 @@ namespace IntroToCSharp.GD3B.Exercises
                        float moveSpeed)
             : base(iD, isActive, position)
         {
-            this.health = health;
-            this.moveSpeed = moveSpeed;
+            this.Health = health;
+            this.MoveSpeed = moveSpeed;
         }
+
+        #endregion Constructors
+
+        #region General - Housekeeping
 
         public override string ToString()
         {
-            return $"Player: {ID1} at {Position} with {health} health" +
-                $" and {moveSpeed} move speed";
+            return $"Player: {ID} at {Position} with {Health} health" +
+                $" and {MoveSpeed} move speed";
         }
+
+        #endregion General - Housekeeping
     }
 }

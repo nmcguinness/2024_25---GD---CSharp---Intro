@@ -26,7 +26,7 @@ namespace IntroToCSharp.GD3B.Exercises
             if (p == null)
                 return false;
 
-            p.moveSpeed *= speedModifier; //0.8f
+            p.MoveSpeed *= speedModifier; //0.8f
             return true;
         }
     }
@@ -47,7 +47,7 @@ namespace IntroToCSharp.GD3B.Exercises
             if (p == null)
                 return false;
 
-            p.health -= healthDamage;
+            p.Health -= healthDamage;
             return true;
         }
     }
