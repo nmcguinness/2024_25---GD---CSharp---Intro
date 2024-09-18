@@ -73,6 +73,10 @@ This repository contains code samples used to learn the basics of C# in preparat
 - [Structs and Enums](Exercises/Structs%20and%20Enums.md)
 - [Keywords](Exercises/Keywords.md)
 
+## Design Exercises
+
+- [Design Exercises](Exercises/Design%20Exercises.md)
+
 ## Tools & Tips
 
 - [Markdown](https://docs.github.com/en/enterprise-cloud@latest/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) in GitHub
@@ -82,6 +86,4 @@ This repository contains code samples used to learn the basics of C# in preparat
 
 - [Weekly Development Plan](ToDo.md)
 
-## Design Exercises
 
-- [Design Exercises](Exercises/Design%20Exercises.md)
