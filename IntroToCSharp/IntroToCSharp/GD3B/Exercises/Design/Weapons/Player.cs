@@ -1,4 +1,4 @@
-﻿using static System.Net.Mime.MediaTypeNames;
+﻿using IntroToCSharp.GD3B.Data;
 
 namespace IntroToCSharp.GD3B.Exercises
 {
@@ -6,6 +6,13 @@ namespace IntroToCSharp.GD3B.Exercises
     {
         public int health;
         public float moveSpeed;
+
+        public Player(string iD)
+           : this(iD, true, GameConstants.PLAYER_START_POSITION,
+                 GameConstants.PLAYER_START_HEALTH,
+                 GameConstants.PLAYER_START_MOVE_SPEED)
+        {
+        }
 
         public Player(string iD, bool isActive,
                        Vector3 position, int health,
@@ -18,7 +25,7 @@ namespace IntroToCSharp.GD3B.Exercises
 
         public override string ToString()
         {
-            return $"Player: {ID} at {position} with {health} health" +
+            return $"Player: {ID1} at {Position} with {health} health" +
                 $" and {moveSpeed} move speed";
         }
     }

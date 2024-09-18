@@ -37,7 +37,7 @@
 
         public override string ToString()
         {
-            return $"Weapon: {ID} at {position}";
+            return $"Weapon: {ID1} at {Position}";
         }
     }
 
