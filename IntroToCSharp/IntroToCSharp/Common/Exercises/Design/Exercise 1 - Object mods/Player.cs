@@ -30,7 +30,7 @@
 
         public override string ToString()
         {
-            return $"Player: {ID} at ({x}, {y}, {z}) with {health} health";
+            return $"Player: {id} at ({x}, {y}, {z}) with {health} health";
         }
     }
 }

@@ -12,9 +12,9 @@
 ### Week 2
 - [x] Add static methods
 - [ ] Use `ref` and `out` in a function call (see Program)
-- [ ] Add demo class(es) (see Player, PlayerList)
-- [ ] Add `constructor chaining` (see Vector3)
-- [ ] Add `string interpolation` demo (see Program, Vector3::ToString)
+- [x] Add demo class(es) (see Player, PlayerList)
+- [x] Add `constructor chaining` (see Vector3)
+- [x] Add `string interpolation` demo (see Program, Vector3::ToString)
 - [ ] Add `validation` on set properties (see Vector3::X with ternary)
 
 
