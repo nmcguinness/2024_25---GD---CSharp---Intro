@@ -35,7 +35,7 @@
 
         public override string ToString()
         {
-            return $"Enemy: {id} at ({x}, {y}, {z}) respawning in {respawnAfterMSecs} millisecs";
+            return $"Enemy: {ID} at ({X}, {Y}, {Z}) respawning in {respawnAfterMSecs} millisecs";
         }
     }
 }

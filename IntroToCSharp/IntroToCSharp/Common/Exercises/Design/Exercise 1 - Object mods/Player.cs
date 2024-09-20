@@ -1,17 +1,19 @@
-﻿namespace IntroToCSharp.Common.Exercise1
+﻿using IntroToCSharp.Common.Data;
+
+namespace IntroToCSharp.Common.Exercise1
 {
     /// <summary>
     /// Represents a player within our game
     /// </summary>
     public class Player : GameObject
     {
-        private static readonly float START_Y_POSITION = 10;
-
         #region Fields
 
         public int health;
 
         #endregion Fields
+
+        #region Properties
 
         public int Health
         {
@@ -21,16 +23,19 @@
             }
             set
             {
-                health = value >= PLAYER_HEALTH_MIN && value <= PLAYER_HEALTH_MAX
+                health = value >= GameConstants.PLAYER_HEALTH_MIN
+                    && value <= GameConstants.PLAYER_HEALTH_MAX
                     ? value
-                    : PLAYER_HEALTH_MIN;
+                    : GameConstants.PLAYER_HEALTH_MIN;
             }
         }
+
+        #endregion Properties
 
         #region Constructors
 
         public Player(string iD)
-      : base(iD, true, 0, START_Y_POSITION, 0)
+      : base(iD, true, 0, GameConstants.START_Y_POSITION, 0)
         {
             this.health = 100;
         }

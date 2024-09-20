@@ -13,5 +13,9 @@ namespace IntroToCSharp.Common.Data
         public static readonly int PLAYER_START_HEALTH = 100;
         public static readonly float PLAYER_START_MOVE_SPEED = 10;
         public static readonly float PLAYER_MAX_MOVE_SPEED = 20;
+
+        public static readonly float START_Y_POSITION = 10;
+        public static readonly int PLAYER_HEALTH_MIN = 0;
+        public static readonly int PLAYER_HEALTH_MAX = 100;
     }
 }
