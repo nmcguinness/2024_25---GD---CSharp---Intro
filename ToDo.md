@@ -23,6 +23,8 @@
 - [ ] Use IComparer in a collection demo 
 - [ ] Use Comparison in a collection demo 
 - [ ] Add protected on set properties (see Vector3)
+
+### Week 4
 - [ ] Add event and delegate demo - see EventGenerator
 - [ ] Add Action, Func, Predicate demo - see Program 
 - [ ] Add Singleton pattern demo - see InventoryManager

@@ -7,47 +7,22 @@ namespace IntroToCSharp.GD3B
     internal class Launcher
     {
         /// <summary>
-        /// Insertion point for GD3A code.
+        /// Insertion point for GD3B code.
         /// </summary>
         /// <par4m name="groupName">Group identifier</param>
         public static void Start(string groupName)
         {
             Console.WriteLine($"\n************************** Group: {groupName} **************************\n");
             Launcher launcher = new Launcher();
+
+            Console.WriteLine("\n************************** Demos **************************n");
             launcher.StartDemos();
 
+            Console.WriteLine("\n************************** Selected Exercise Solutions **************************n");
             launcher.StartExercises();
         }
 
-        public void StartExercises()
-        {
-            Console.WriteLine("\nLists & Predicates - Exercise 2...\n");
-
-            List<Player> playerList = new List<Player>
-            {
-                new Player("anna", true, new Vector3(0, 10, 0), 100, 5),
-                new Player("bob", true, new Vector3(0, 40, 0), 55, 2),
-                new Player("ciara", true, new Vector3(0, 60, 0), 25, 1)
-            };
-
-            Console.WriteLine("Enter a name to search for: ");
-            string searchName = Console.ReadLine();
-
-            Predicate<Player> idPred = (p) =>
-            {
-                return p.ID.Equals(searchName) && p.Health >= 20;
-            };
-
-            List<Player> searchResult = playerList.FindAll((p) => p.ID == searchName);
-            Console.WriteLine($"Count: {searchResult.Count}");
-            if (searchResult.Count > 0)
-                Console.WriteLine(searchResult[0]);
-        }
-
-        private bool IsRightPerson(Player p)
-        {
-            return p.ID.Equals("bob");
-        }
+        #region Demos
 
         public void StartDemos()
         {
@@ -62,9 +37,6 @@ namespace IntroToCSharp.GD3B
 
             Console.WriteLine("\n****DemoList****\n");
             DemoList();
-
-            Console.WriteLine("\n****DemoListInterfaces****\n");
-            DemoListInterfaces();
 
             Console.WriteLine("\n****DemoPredicate****\n");
             DemoPredicate();
@@ -119,25 +91,27 @@ namespace IntroToCSharp.GD3B
         private void DemoPredicate()
         {
             List<int> skillsList = new List<int>
-            {
-                150, 22, 45, 65, 220, 85
-            };
+                {
+                    150, 22, 45, 65, 220, 85
+                };
 
+            Console.WriteLine("Highly skilled students predicate as using method...");
             List<int> list1 = skillsList.FindAll(IsHighlySkilled);
-
             foreach (int skill in list1)
                 Console.WriteLine(skill);
 
+            Console.WriteLine("Highly skilled students using predicate as lambda expression...");
             int skillThreshold = 200;
             Predicate<int> skillsPred = (value) => value > skillThreshold;
             List<int> list2 = skillsList.FindAll(skillsPred);
             foreach (int skill in list2)
                 Console.WriteLine(skill);
 
+            Console.WriteLine("Nationalities using predicate as lambda expression...");
             List<string> nationalities = new List<string>
-            {
-                "IE", "UK", "US", "FR", "DE", "ES", "IE", "UK", "IE"
-            };
+                {
+                    "IE", "UK", "US", "FR", "DE", "ES", "IE", "UK", "IE"
+                };
 
             Predicate<string> natPred = (nationality) => nationality == "IE";
             List<string> list3 = nationalities.FindAll(natPred);
@@ -149,24 +123,6 @@ namespace IntroToCSharp.GD3B
         private bool IsHighlySkilled(int skill)
         {
             return skill > 100;
-        }
-
-        private void DemoListInterfaces()
-        {
-            List<IApplyDamage> damageList = new List<IApplyDamage>
-            {
-                new ApplyHealthDamage(1),
-                new ApplySpeedDamage(0.95f)
-            };
-
-            Weapon w1 = new Weapon("health killer rifle", true,
-                     new Vector3(10, 10, 0), damageList);
-
-            Player p1 = new Player("max", true, new Vector3(0, 10, 0), 100, 50);
-
-            Console.WriteLine(p1);
-            w1.DoDamage(p1);
-            Console.WriteLine(p1);
         }
 
         private void DemoList()
@@ -214,29 +170,55 @@ namespace IntroToCSharp.GD3B
             foreach (Player p in pList)
                 Console.WriteLine(p);
         }
+
+        #endregion Demos
+
+        #region Exercises
+
+        private void StartExercises()
+        {
+            Console.WriteLine("\nLists & Predicates - Exercise 2...\n");
+            Exercise2();
+        }
+
+        private void Exercise2()
+        {
+            List<Player> playerList = new List<Player>
+            {
+                new Player("anna", true, new Vector3(0, 10, 0), 100, 5),
+                new Player("bob", true, new Vector3(0, 40, 0), 55, 2),
+                new Player("ciara", true, new Vector3(0, 60, 0), 25, 1)
+            };
+
+            Console.WriteLine("Enter a name to search for: ");
+            string? searchName = Console.ReadLine();
+
+            Predicate<Player> idAndHealth = (p) =>
+            {
+                return p.ID.Equals(searchName) && p.Health >= 20;
+            };
+
+            List<Player> searchResult = playerList.FindAll(idAndHealth);
+            Console.WriteLine($"Count: {searchResult.Count}");
+
+            Console.WriteLine("Top search result:\n");
+            if (searchResult.Count > 0)
+                Console.WriteLine(searchResult[0]);
+        }
+
+        /// <summary>
+        /// This hard-coded predicate is used to filter out the right person
+        /// BUT it has a limitation - it is hard-coded to filter out "bob"
+        /// INSTEAD we prefer to use a language feature called lambda expressions
+        /// SEE Exercise2 for an example of a lambda expression
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
+        private bool IsRightPerson(Player p)
+        {
+            return p.ID.Equals("bob");
+        }
+
+        #endregion Exercises
     }
 }
-
-//Console.WriteLine("Hello, World!");
-//int x = 6;
-//var z = 2 * x;
-//Console.WriteLine(z);
-
-//Vector3 v1 = new Vector3(1, 2, 3);
-//Console.WriteLine(v1.ToString());
-//Console.WriteLine(v1);
-
-//Vector3 v2 = new Vector3(1, 2, 3);
-//Console.WriteLine(v1.Equals(v2));
-
-//v2.X = 1000; //change x value using property
-//Console.WriteLine(v1.Equals(v2));
-//Console.WriteLine(v2.X); //access x value using property
-
-////TODO - NMCG - Override operator ==
-//bool areEqual = v1 == v2;
-//Console.WriteLine(areEqual);
-//Console.WriteLine(v1 == v2);
-
-////BUG - NMCG - Does equals always work?
-//var t = 10;

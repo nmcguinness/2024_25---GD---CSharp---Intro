@@ -4,7 +4,7 @@
     {
         private static void Main(string[] args)
         {
-            bool bGroupA = false;
+            bool bGroupA = true;
 
             // Start the program for each group - disable the group you are not working in
             if (bGroupA)

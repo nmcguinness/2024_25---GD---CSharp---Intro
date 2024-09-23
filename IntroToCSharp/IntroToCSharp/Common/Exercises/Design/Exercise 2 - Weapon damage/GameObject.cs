@@ -8,7 +8,7 @@ namespace IntroToCSharp.Common.Exercise2
 
         private string id;
         private bool isActive;
-        private Vector3 position; //rotation, scale, etc.
+        private Vector3? position; //rotation, scale, etc.
 
         #endregion Fields
 
