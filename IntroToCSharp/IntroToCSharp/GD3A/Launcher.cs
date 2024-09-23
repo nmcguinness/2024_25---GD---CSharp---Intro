@@ -75,8 +75,12 @@ namespace IntroToCSharp.GD3A
         private void DemoList()
         {
             //simple demo
-            List<string> strList = new List<string>();
-            strList.Add("apple"); strList.Add("banana"); strList.Add("kiwi");
+            List<string> strList = new List<string>
+            {
+                "apple", "banana", "kiwi"
+            };
+
+            //    strList.Add("apple"); strList.Add("banana"); strList.Add("kiwi");
 
             Console.WriteLine(strList[0]);
             Console.WriteLine(strList.Count);
@@ -131,8 +135,12 @@ namespace IntroToCSharp.GD3A
                 Console.WriteLine(skill);
 
             Console.WriteLine("Highly skilled students using predicate as lambda expression...");
-            int skillThreshold = 200;
-            Predicate<int> skillsPred = (value) => value > skillThreshold;
+            Console.WriteLine("Enter skill threshold: ");
+            string skillThreshold = Console.ReadLine();
+            int skillInt = int.Parse(skillThreshold);
+
+            //lambda expression: (input-parameters) => expression
+            Predicate<int> skillsPred = (value) => value > skillInt;
             List<int> list2 = skillsList.FindAll(skillsPred);
             foreach (int skill in list2)
                 Console.WriteLine(skill);
@@ -147,18 +155,76 @@ namespace IntroToCSharp.GD3A
             List<string> list3 = nationalities.FindAll(natPred);
             Console.WriteLine($"There are {list3.Count} IE students");
 
-            //TODO - All - Create a list of players and predicate to filter out health > 50
+            //TODO - All - Create list of players and a predicate to filter out active players
+            List<Player> pList = new List<Player>
+            {
+                new Player("alpha", true, 3,4,5),
+                new Player("beta", false, 6,7,8),
+                new Player("chi", true, 9,10,11),
+                new Player("phi", false, 12,13,14)
+            };
+
+            Console.WriteLine("Active players...");
+
+            Predicate<Player> isActivePred = (p) => p.IsActive;
+            List<Player> activePlayers = pList.FindAll(isActivePred);
+            foreach (Player p in activePlayers)
+                Console.WriteLine(p);
+
+            Console.WriteLine("Active players with 'a'...");
+
+            Predicate<Player> IsActiveWithLetter = (player) =>
+            {
+                //code...
+                return player.IsActive && player.ID.IndexOf('a') == 0;
+            };
+
+            List<Player> activeWithPlayers = pList.FindAll(IsActiveWithLetter);
+            foreach (Player p in activeWithPlayers)
+                Console.WriteLine(p);
+
+            List<int> numList = new List<int>
+            {
+                1,3,52,3,2,15,7,48,2,201
+            };
+
+            Predicate<int> myPred = (number) => number % 2 == 1;
+            int count = CountAll(numList, myPred);
+            Console.WriteLine($"Odd: {count}");
+        }
+
+        /// <summary>
+        /// Count if the number matches any 1 of the predicates in the list
+        /// </summary>
+        /// <param name="numList"></param>
+        /// <param name="predList"></param>
+        /// <returns></returns>
+        private int CountIfMatchAny(List<int> numList, List<Predicate<int>> predList)
+        {
+            return -1;
+        }
+
+        private int CountAll(List<int> numList, Predicate<int> pred)
+        {
+            int count = 0;
+            for (int i = 0; i < numList.Count; i++)
+            {
+                if (pred(numList[i]))
+                    count++;
+            }
+            return count;
         }
 
         private bool IsHighlySkilled(int skill)
         {
-            return skill > 100;
+            return skill > 200;
         }
 
         #endregion Demos
 
         private void StartExercises()
         {
+            //Exercise2();
         }
     }
 }
