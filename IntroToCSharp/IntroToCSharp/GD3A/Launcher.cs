@@ -36,40 +36,40 @@ namespace IntroToCSharp.GD3A
             Console.WriteLine("\n************************** Demos **************************n");
             launcher.StartDemos();
 
-            Console.WriteLine("\n************************** Selected Exercise Solutions **************************n");
-            launcher.StartExercises();
+            //Console.WriteLine("\n************************** Selected Exercise Solutions **************************n");
+            //launcher.StartExercises();
         }
 
         #region Demos
 
         public void StartDemos()
         {
-            Console.WriteLine("\n**** DemoConsole ****\n");
-            DemoConsole();
+            //Console.WriteLine("\n**** DemoConsole ****\n");
+            //DemoConsole();
 
-            Console.WriteLine("\n**** DemoInheritance ****\n");
-            DemoInheritance();
+            //Console.WriteLine("\n**** DemoInheritance ****\n");
+            //DemoInheritance();
 
-            Console.WriteLine("\n**** DemoInterface ****\n");
-            DemoInterface();
+            //Console.WriteLine("\n**** DemoInterface ****\n");
+            //DemoInterface();
 
-            Console.WriteLine("\n****DemoList****\n");
-            DemoList();
+            //Console.WriteLine("\n****DemoList****\n");
+            //DemoList();
 
-            Console.WriteLine("\n****DemoPredicate****\n");
-            DemoPredicate();
+            //Console.WriteLine("\n****DemoPredicate****\n");
+            //DemoPredicate();
 
-            Console.WriteLine("\n****DemoAction****\n");
-            DemoAction();
+            //Console.WriteLine("\n****DemoAction****\n");
+            //DemoAction();
 
             Console.WriteLine("\n****DemoFunc****\n");
             DemoFunc();
 
-            Console.WriteLine("\n****DemoDelegate****\n");
-            DemoDelegate();
+            //Console.WriteLine("\n****DemoDelegate****\n");
+            //DemoDelegate();
 
-            Console.WriteLine("\n****DemoEvent****\n");
-            DemoEvent();
+            //Console.WriteLine("\n****DemoEvent****\n");
+            //DemoEvent();
         }
 
         #region Demo - Action
@@ -123,6 +123,8 @@ namespace IntroToCSharp.GD3A
 
             foreach (var pickupFunc in pickupFuncList)
                 pickupFunc(p1);
+
+            Console.WriteLine(p1);
         }
 
         private bool ResetValueIf(Pickup p)
