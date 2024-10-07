@@ -100,7 +100,36 @@ namespace IntroToCSharp.GD3A
 
         private void DemoFunc()
         {
-            throw new NotImplementedException();
+            //create a Pickup
+            var p1 = new Pickup("potion of eternal sarcasm", 1000, false);
+
+            //create 2-3 functions that do something to a pickup
+            Func<Pickup, bool> doValueReset = ResetValueIf;
+            Func<Pickup, bool> doIDReset = (p) =>
+            {
+                if (p.id == string.Empty)
+                    p.id = "Default";
+                return true;
+            };
+            Func<Pickup, bool> doConsumedResetIfValue = (p) =>
+            {
+                if (p.value < 0) p.isConsumed = true;
+                return true;
+            };
+            List<Func<Pickup, bool>> pickupFuncList = new List<Func<Pickup, bool>>
+            {
+                doValueReset, doIDReset, doConsumedResetIfValue
+            };
+
+            foreach (var pickupFunc in pickupFuncList)
+                pickupFunc(p1);
+        }
+
+        private bool ResetValueIf(Pickup p)
+        {
+            if (p.value < 0 || p.value > 1000)
+                p.value = 100;
+            return true;
         }
 
         private void DemoDelegate()
