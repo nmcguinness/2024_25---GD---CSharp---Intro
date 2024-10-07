@@ -3,6 +3,25 @@
 /// GD3A specific code should be placed in this namespace.
 namespace IntroToCSharp.GD3A
 {
+    internal class Pickup
+    {
+        public string id;
+        public int value;
+        public bool isConsumed;
+
+        public Pickup(string id, int value, bool isConsumed)
+        {
+            this.id = id;
+            this.value = value;
+            this.isConsumed = isConsumed;
+        }
+
+        public override string ToString()
+        {
+            return $"{id}, {value}, {isConsumed}";
+        }
+    }
+
     internal class Launcher
     {
         /// <summary>
