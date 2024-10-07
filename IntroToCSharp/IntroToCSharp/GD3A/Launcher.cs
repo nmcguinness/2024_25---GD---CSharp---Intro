@@ -1,4 +1,5 @@
 ﻿using IntroToCSharp.Common.Exercise1;
+using System.Reflection.Metadata.Ecma335;
 
 /// GD3A specific code should be placed in this namespace.
 namespace IntroToCSharp.GD3A
@@ -64,6 +65,9 @@ namespace IntroToCSharp.GD3A
 
             Console.WriteLine("\n****DemoFunc****\n");
             DemoFunc();
+
+            Console.WriteLine("\n****DemoFuncStrings****\n");
+            DemoFuncStrings();
 
             //Console.WriteLine("\n****DemoDelegate****\n");
             //DemoDelegate();
@@ -140,10 +144,23 @@ namespace IntroToCSharp.GD3A
             string fName = "     bob";   //Bob
 
             //write 2-3 lambda expressions to process that string in some way
+            Func<string, string> removeSpace = (str) => str.Trim();
+            Func<string, string> uppercase = (str) => str.ToUpper();
 
             //store those string processors in a sortedlist
+            List<Func<string, string>> strProcessors
+                = new List<Func<string, string>> {
+                removeSpace, uppercase
+            };
 
+            string processedStr = fName;
             //apply to the string
+            foreach (var processor in strProcessors)
+            {
+                processedStr = processor(processedStr);
+            }
+
+            Console.WriteLine($"After processing: {processedStr}");
 
             //list a strings and apply the processors to the list of strings
         }
