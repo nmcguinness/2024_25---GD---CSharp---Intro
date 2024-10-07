@@ -39,6 +39,59 @@ namespace IntroToCSharp.GD3A
 
             Console.WriteLine("\n****DemoPredicate****\n");
             DemoPredicate();
+
+            Console.WriteLine("\n****DemoAction****\n");
+            DemoAction();
+
+            Console.WriteLine("\n****DemoFunc****\n");
+            DemoFunc();
+
+            Console.WriteLine("\n****DemoDelegate****\n");
+            DemoDelegate();
+
+            Console.WriteLine("\n****DemoEvent****\n");
+            DemoEvent();
+        }
+
+        #region Demo - Action
+
+        private void DemoAction()
+        {
+            Action notifyEvent = RingBell;
+            NotifyMe(notifyEvent, "Event 1");
+            NotifyMe(NotifyMessage, "Event 2");
+        }
+
+        private void NotifyMe(Action action, string msg)
+        {
+            Console.WriteLine(msg); action();
+        }
+
+        private void RingBell()
+        {
+            Console.Beep(2000, 1500);
+        }
+
+        private void NotifyMessage()
+        {
+            Console.WriteLine("Something occured...");
+        }
+
+        #endregion Demo - Action
+
+        private void DemoFunc()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void DemoDelegate()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void DemoEvent()
+        {
+            throw new NotImplementedException();
         }
 
         private void DemoConsole()
