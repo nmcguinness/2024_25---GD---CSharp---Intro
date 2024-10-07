@@ -134,6 +134,20 @@ namespace IntroToCSharp.GD3A
             return true;
         }
 
+        private void DemoFuncStrings()
+        {
+            //create string to represent your first name
+            string fName = "     bob";   //Bob
+
+            //write 2-3 lambda expressions to process that string in some way
+
+            //store those string processors in a sortedlist
+
+            //apply to the string
+
+            //list a strings and apply the processors to the list of strings
+        }
+
         private void DemoDelegate()
         {
             throw new NotImplementedException();
