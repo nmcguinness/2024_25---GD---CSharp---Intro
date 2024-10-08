@@ -181,6 +181,18 @@ namespace IntroToCSharp.GD3B
 
         private void DemoFuncStrings()
         {
+            string id = "     rOBERT";
+
+            //apply a list of actions to this string
+            // format: remove whitespace, lowercase all, uppercase first char
+
+            //create 3 Actions to perform those format changes
+
+            //store in a list
+
+            //apply to the string
+
+            //test it!
         }
 
         private void DemoDelegate()
