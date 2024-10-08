@@ -58,7 +58,7 @@ This repository contains code samples used to learn the basics of C# in preparat
 
 - [Tutorials Teacher - Learn C#](https://www.tutorialsteacher.com/csharp)
 - [Refactoring Guru - Design Patterns](https://refactoring.guru/design-patterns) 
-- [Summary - Action, Func, Delegate, and Event in C#](Reading/csharp_delegates.md)
+- **Under Construction** - [Summary - Action, Func, Delegate, and Event in C#](Reading/csharp_delegates.md)
 
 ## Recommended Reading 
 
