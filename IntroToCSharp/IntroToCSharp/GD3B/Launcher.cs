@@ -1,5 +1,6 @@
 ﻿using IntroToCSharp.Common.Exercise2;
 using IntroToCSharp.Common.Utilities;
+using System.ComponentModel;
 
 /// GD3B specific code should be placed in this namespace.
 namespace IntroToCSharp.GD3B
@@ -44,42 +45,75 @@ namespace IntroToCSharp.GD3B
             Console.WriteLine("\n****DemoAction****\n");
             DemoAction();
 
-            Console.WriteLine("\n****DemoFunc****\n");
-            DemoFunc();
+            //Console.WriteLine("\n****DemoFunc****\n");
+            //DemoFunc();
 
-            Console.WriteLine("\n****DemoFuncStrings****\n");
-            DemoFuncStrings();
+            //Console.WriteLine("\n****DemoFuncStrings****\n");
+            //DemoFuncStrings();
 
-            Console.WriteLine("\n****DemoDelegate****\n");
-            DemoDelegate();
+            //Console.WriteLine("\n****DemoDelegate****\n");
+            //DemoDelegate();
 
-            Console.WriteLine("\n****DemoEvent****\n");
-            DemoEvent();
+            //Console.WriteLine("\n****DemoEvent****\n");
+            //DemoEvent();
+        }
+
+        private void ShowWinMsg()
+        {
+            Console.WriteLine("You won!!!!");
+        }
+
+        private void PlayBeep()
+        {
+            Console.Beep(500, 2000);
+        }
+
+        private void Send(string IP, string msg)
+        {
+            Console.WriteLine($"sending {msg} to {IP}");
         }
 
         private void DemoAction()
         {
-            throw new NotImplementedException();
+            //stores a reference to the ShowWinMsg() code
+            Action doResponse = ShowWinMsg;
+            //invoke the code the action points to
+            doResponse();
+            //now re-assign the action and invoke the code
+            doResponse = PlayBeep;
+            doResponse();
+
+            //stores a ref to a method that accepts parameters
+            Action<string, string> notifyAction = Send;
+            notifyAction("192.168.1.2", "Disconnect");
+
+            List<Action<string, string>> notifyList
+                = new List<Action<string, string>>
+                {
+                    Send /*
+                          * lost of methods with same signature
+                          * i.e. void name(string, string)
+                          */
+                };
+
+            foreach (var notify in notifyList)
+                notify("a", "b");
         }
 
         private void DemoFunc()
         {
-            throw new NotImplementedException();
         }
 
         private void DemoFuncStrings()
         {
-            throw new NotImplementedException();
         }
 
         private void DemoDelegate()
         {
-            throw new NotImplementedException();
         }
 
         private void DemoEvent()
         {
-            throw new NotImplementedException();
         }
 
         private void DemoClasses()
