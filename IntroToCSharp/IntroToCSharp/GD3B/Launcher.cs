@@ -5,13 +5,13 @@ using System.Reflection;
 /// GD3B specific code should be placed in this namespace.
 namespace IntroToCSharp.GD3B
 {
-    internal class Player
+    internal class Character
     {
         public int health;
         public int strength;
         public int rank;
 
-        public Player(int health, int strength, int rank)
+        public Character(int health, int strength, int rank)
         {
             this.health = health;
             this.strength = strength;
@@ -67,8 +67,8 @@ namespace IntroToCSharp.GD3B
             Console.WriteLine("\n****DemoFunc****\n");
             DemoFunc();
 
-            //Console.WriteLine("\n****DemoFuncStrings****\n");
-            //DemoFuncStrings();
+            Console.WriteLine("\n****DemoFuncStrings****\n");
+            DemoFuncStrings();
 
             //Console.WriteLine("\n****DemoDelegate****\n");
             //DemoDelegate();
@@ -148,25 +148,28 @@ namespace IntroToCSharp.GD3B
             float result = arithFuncs[randFuncIndex](3, 2);
             Console.WriteLine(result);
 
-            List<Func<Player, int, bool>> upgradeFuncs
-                   = new List<Func<Player, int, bool>>
+            List<Func<Character, int, bool>> upgradeFuncs
+                   = new List<Func<Character, int, bool>>
            {
                 UpgradeStrength, UpgradeHealth
            };
 
-            Player p = new Player(100, 1000, 5);
+            Character p = new Character(100, 1000, 5);
+
+            UpgradeHealth(p, 50);
+            UpgradeStrength(p, 25);
 
             foreach (var upgrade in upgradeFuncs)
                 upgrade(p, 10);
         }
 
-        private bool UpgradeStrength(Player p, int delta)
+        private bool UpgradeStrength(Character p, int delta)
         {
             p.strength += delta;
             return true;
         }
 
-        private bool UpgradeHealth(Player p, int delta)
+        private bool UpgradeHealth(Character p, int delta)
         {
             if (p.rank >= 100)
                 p.health += delta * 4;
