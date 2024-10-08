@@ -35,8 +35,8 @@ This repository contains code samples used to learn the basics of C# in preparat
 
 | #  | Completed | Topic                            | Description                                                                 | Recommended Reading                                                                                           |
 |----|:---------:|----------------------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| 13 | <ul><li>- [ ] </li></ul> | **Delegates & Events in Unity**           | Implementing event-driven gameplay using C# delegates and events.           | [Delegate](https://www.tutorialsteacher.com/csharp/csharp-delegates), [Event](https://www.tutorialspoint.com/csharp/csharp_events.htm) |
-| 14 | <ul><li>- [ ] </li></ul> | **Func & Action**                         | Passing game logic as parameters for AI or state machines.                  | [Func](https://www.tutorialsteacher.com/csharp/csharp-func-delegate), [Action](https://www.tutorialsteacher.com/csharp/csharp-action-delegate) |
+| 14 | <ul><li>- [ ] </li></ul> | **Delegates & Events**           | Implementing event-driven gameplay using C# delegates and events.           | [Delegate](https://www.tutorialsteacher.com/csharp/csharp-delegates), [Event](https://www.tutorialspoint.com/csharp/csharp_events.htm) |
+| 13 | <ul><li>- [ ] </li></ul> | **Func & Action**                         | Passing game logic as parameters for AI or state machines.                  | [Func](https://www.tutorialsteacher.com/csharp/csharp-func-delegate), [Action](https://www.tutorialsteacher.com/csharp/csharp-action-delegate) |
 | 15 | <ul><li>- [x] </li></ul> | **Predicate & Lambda Expressions**        | Using `Predicate` and Lambda Expressions to filter and find game objects.   | [Predicate](https://www.tutorialsteacher.com/csharp/csharp-predicate), [Lambda Expressions](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions) |
 | 21 | <ul><li>- [ ] </li></ul> | **Async & Await**                         | Using `async` and `await` for asynchronous operations in Unity.             | [Async and Await](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/)                    |
 | 20 | <ul><li>- [ ] </li></ul> | **Coroutines in Unity**                   | Using coroutines for timing, delays, and non-blocking actions in Unity.     | [Unity Coroutines](https://docs.unity3d.com/Manual/Coroutines.html)                                            |
@@ -58,7 +58,8 @@ This repository contains code samples used to learn the basics of C# in preparat
 
 - [Tutorials Teacher - Learn C#](https://www.tutorialsteacher.com/csharp)
 - [Refactoring Guru - Design Patterns](https://refactoring.guru/design-patterns) 
-
+- [Summary - Action, Func, Delegate, and Event in C#](Reading/csharp_delegates.md)
+- 
 ## Recommended Reading 
 
 - [The C# type system](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types)
