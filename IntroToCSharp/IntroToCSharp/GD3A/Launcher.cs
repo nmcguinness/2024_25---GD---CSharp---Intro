@@ -1,34 +1,34 @@
-﻿using IntroToCSharp.Common.Exercise1;
-using System.Reflection.Metadata.Ecma335;
+﻿using IntroToCSharp.Common.Exercise2;
+using IntroToCSharp.Common.Utilities;
 
 /// GD3A specific code should be placed in this namespace.
 namespace IntroToCSharp.GD3A
 {
-    internal class Pickup
+    internal class Character
     {
-        public string id;
-        public int value;
-        public bool isConsumed;
+        public int health;
+        public int strength;
+        public int rank;
 
-        public Pickup(string id, int value, bool isConsumed)
+        public Character(int health, int strength, int rank)
         {
-            this.id = id;
-            this.value = value;
-            this.isConsumed = isConsumed;
+            this.health = health;
+            this.strength = strength;
+            this.rank = rank;
         }
 
         public override string ToString()
         {
-            return $"{id}, {value}, {isConsumed}";
+            return $"{health}, {strength}, {rank}";
         }
     }
 
     internal class Launcher
     {
         /// <summary>
-        /// Insertion point for GD3A code.
+        /// Insertion point for GD3B code.
         /// </summary>
-        /// <par4m name="groupName">Group identifier</param>
+        /// <param name="groupName">Group identifier</param>
         public static void Start(string groupName)
         {
             Console.WriteLine($"\n************************** Group: {groupName} **************************\n");
@@ -45,14 +45,14 @@ namespace IntroToCSharp.GD3A
 
         public void StartDemos()
         {
-            //Console.WriteLine("\n**** DemoConsole ****\n");
-            //DemoConsole();
+            //Console.WriteLine("\n****DemoClasses****\n");
+            //DemoClasses();
 
-            //Console.WriteLine("\n**** DemoInheritance ****\n");
+            //Console.WriteLine("\n****DemoInheritance****\n");
             //DemoInheritance();
 
-            //Console.WriteLine("\n**** DemoInterface ****\n");
-            //DemoInterface();
+            //Console.WriteLine("\n****DemoInterfaces****\n");
+            //DemoInterfaces();
 
             //Console.WriteLine("\n****DemoList****\n");
             //DemoList();
@@ -60,8 +60,8 @@ namespace IntroToCSharp.GD3A
             //Console.WriteLine("\n****DemoPredicate****\n");
             //DemoPredicate();
 
-            //Console.WriteLine("\n****DemoAction****\n");
-            //DemoAction();
+            Console.WriteLine("\n****DemoAction****\n");
+            DemoAction();
 
             Console.WriteLine("\n****DemoFunc****\n");
             DemoFunc();
@@ -76,145 +76,238 @@ namespace IntroToCSharp.GD3A
             //DemoEvent();
         }
 
-        #region Demo - Action
+        private void ShowWinMsg()
+        {
+            Console.WriteLine("You won!!!!");
+        }
+
+        private void PlayBeep()
+        {
+            Console.Beep(500, 2000);
+        }
+
+        private void Send(string IP, string msg)
+        {
+            Console.WriteLine($"sending {msg} to {IP}");
+        }
 
         private void DemoAction()
         {
-            Action notifyEvent = RingBell;
-            NotifyMe(notifyEvent, "Event 1");
-            NotifyMe(NotifyMessage, "Event 2");
+            //stores a reference to the ShowWinMsg() code
+            Action doResponse = ShowWinMsg;
+            //invoke the code the action points to
+            doResponse();
+            //now re-assign the action and invoke the code
+            doResponse = PlayBeep;
+            doResponse();
+
+            //stores a ref to a method that accepts parameters
+            Action<string, string> notifyAction = Send;
+            notifyAction("192.168.1.2", "Disconnect");
+
+            List<Action<string, string>> notifyList
+                = new List<Action<string, string>>
+                {
+                    Send /*
+                          * lost of methods with same signature
+                          * i.e. void name(string, string)
+                          */
+                };
+
+            foreach (var notify in notifyList)
+                notify("a", "b");
         }
 
-        private void NotifyMe(Action action, string msg)
-        {
-            Console.WriteLine(msg); action();
-        }
+        private float add(int x, int y)
+        { return x + y; }
 
-        private void RingBell()
-        {
-            Console.Beep(2000, 1500);
-        }
+        private float divide(int x, int y)
+        { return x / y; }
 
-        private void NotifyMessage()
-        {
-            Console.WriteLine("Something occured...");
-        }
-
-        #endregion Demo - Action
+        private float mod(int x, int y)
+        { return x % y; }
 
         private void DemoFunc()
         {
-            //create a Pickup
-            var p1 = new Pickup("potion of eternal sarcasm", 1000, false);
+            Func<int, int, float> arithFunc;
 
-            //create 2-3 functions that do something to a pickup
-            Func<Pickup, bool> doValueReset = ResetValueIf;
-            Func<Pickup, bool> doIDReset = (p) =>
+            arithFunc = add;
+
+            Console.WriteLine(arithFunc(13, 10));
+
+            List<Func<int, int, float>> arithFuncs
+                    = new List<Func<int, int, float>>
             {
-                if (p.id == string.Empty)
-                    p.id = "Default";
-                return true;
-            };
-            Func<Pickup, bool> doConsumedResetIfValue = (p) =>
-            {
-                if (p.value < 0) p.isConsumed = true;
-                return true;
-            };
-            List<Func<Pickup, bool>> pickupFuncList = new List<Func<Pickup, bool>>
-            {
-                doValueReset, doIDReset, doConsumedResetIfValue
+                add, divide, mod
             };
 
-            foreach (var pickupFunc in pickupFuncList)
-                pickupFunc(p1);
+            Random rand = new Random();
+            int randFuncIndex = rand.Next(0, 2);
 
-            Console.WriteLine(p1);
+            float result = arithFuncs[randFuncIndex](3, 2);
+            Console.WriteLine(result);
+
+            List<Func<Character, int, bool>> upgradeFuncs
+                   = new List<Func<Character, int, bool>>
+           {
+                UpgradeStrength, UpgradeHealth
+           };
+
+            Character p = new Character(100, 1000, 5);
+
+            UpgradeHealth(p, 50);
+            UpgradeStrength(p, 25);
+
+            foreach (var upgrade in upgradeFuncs)
+                upgrade(p, 10);
         }
 
-        private bool ResetValueIf(Pickup p)
+        private bool UpgradeStrength(Character p, int delta)
         {
-            if (p.value < 0 || p.value > 1000)
-                p.value = 100;
+            p.strength += delta;
             return true;
+        }
+
+        private bool UpgradeHealth(Character p, int delta)
+        {
+            if (p.rank >= 100)
+                p.health += delta * 4;
+            else
+                p.health += delta * 2;
+
+            return true;
+        }
+
+        private string ToLowercase(string s)
+        {
+            return s.ToLower();
         }
 
         private void DemoFuncStrings()
         {
-            //create string to represent your first name
-            string fName = "     bob";   //Bob
+            string id = "     rOBERT";
 
-            //write 2-3 lambda expressions to process that string in some way
-            Func<string, string> removeSpace = (str) => str.Trim();
-            Func<string, string> uppercase = (str) => str.ToUpper();
+            //apply a list of actions to this string
+            // format: remove whitespace, lowercase all, uppercase first char
 
-            //store those string processors in a sortedlist
-            List<Func<string, string>> strProcessors
-                = new List<Func<string, string>> {
-                removeSpace, uppercase
+            //create 3 Funcs to perform those format changes
+            Func<string, string> removeWhite = (s) => { return s.Trim(); };
+            Func<string, string> toLower = ToLowercase;
+            Func<string, string> capitaliseFirst = (s) =>
+            {
+                return char.ToUpper(s[0]) + s.Substring(1);
             };
 
-            string processedStr = fName;
-            //apply to the string
-            foreach (var processor in strProcessors)
+            //store in a list
+            List<Func<string, string>> stringProcessors = new List<Func<string, string>>
             {
-                processedStr = processor(processedStr);
-            }
+                removeWhite, toLower, capitaliseFirst
+            };
 
-            Console.WriteLine($"After processing: {processedStr}");
+            //apply to the string
+            foreach (var processor in stringProcessors)
+                id = processor(id);
 
-            //list a strings and apply the processors to the list of strings
+            //test it!
+            Console.WriteLine(id);
         }
 
         private void DemoDelegate()
         {
-            throw new NotImplementedException();
         }
 
         private void DemoEvent()
         {
-            throw new NotImplementedException();
         }
 
-        private void DemoConsole()
+        private void DemoClasses()
         {
-            Console.WriteLine("Hello, World!");
-            int x = 6;
-            var z = 2 * x;
-            Console.WriteLine(z);
+            //  throw new NotImplementedException();
+            Vector3 v1 = new Vector3(1, 2, 3);
+            Vector3 v2 = new Vector3(10, 20, 30);
+
+            Console.WriteLine(v1);
+            Console.WriteLine(v1.Equals(v2));
         }
 
         private void DemoInheritance()
         {
-            GameObject go1 = new GameObject("go1", true, 0, 0, 0);
+            GameObject go1 = new GameObject("go1", true, new Vector3(0, 0, 0));
             Console.WriteLine(go1);
 
-            Player p1 = new Player("max", true, 0, 10, 0, 100);
+            Player p1 = new Player("max", true, new Vector3(0, 10, 0),
+                                                            100, 25.5f);
             Console.WriteLine(p1);
+
+            //Weapon w1 = new Weapon("plasma rifle",
+            //                    true, new Vector3(10, 10, 0), 10);
+            //Console.WriteLine(w1);
+
+            //Console.WriteLine($"Before weapon: {p1}");
+            //w1.Apply(p1);
+            //Console.WriteLine($"After weapon: {p1}");
         }
 
-        private void DemoInterface()
+        private void DemoInterfaces()
         {
-            Player p1 = new Player("max", true, 0, 10, 0, 100);
+            //IApplyDamage applyDamage = new ApplySpeedDamage(0.5f);
+            //Weapon w1 = new Weapon("health killer rifle", true,
+            //            new Vector3(10, 10, 0), applyDamage);
 
-            Enemy e1 = new Enemy("paladin", true, 10, 10, 0, 1000);
+            //Player p1 = new Player("max", true, new Vector3(0, 10, 0),
+            //                              100, 25.5f);
 
-            Console.WriteLine($"Before mod: {p1}");
+            //Console.WriteLine(p1);
+            //w1.DoDamage(p1);
+            //Console.WriteLine(p1);
+            //w1.DoDamage(p1);
+            //Console.WriteLine(p1);
+            //w1.DoDamage(p1);
+            //Console.WriteLine(p1);
+        }
 
-            //Lets apply the modification made by the enemy to the player
-            e1.Apply(p1);
+        private void DemoPredicate()
+        {
+            List<int> skillsList = new List<int>
+                {
+                    150, 22, 45, 65, 220, 85
+                };
 
-            Console.WriteLine($"After mod: {p1}");
+            Console.WriteLine("Highly skilled students predicate as using method...");
+            List<int> list1 = skillsList.FindAll(IsHighlySkilled);
+            foreach (int skill in list1)
+                Console.WriteLine(skill);
+
+            Console.WriteLine("Highly skilled students using predicate as lambda expression...");
+            int skillThreshold = 200;
+            Predicate<int> skillsPred = (value) => value > skillThreshold;
+            List<int> list2 = skillsList.FindAll(skillsPred);
+            foreach (int skill in list2)
+                Console.WriteLine(skill);
+
+            Console.WriteLine("Nationalities using predicate as lambda expression...");
+            List<string> nationalities = new List<string>
+                {
+                    "IE", "UK", "US", "FR", "DE", "ES", "IE", "UK", "IE"
+                };
+
+            Predicate<string> natPred = (nationality) => nationality == "IE";
+            List<string> list3 = nationalities.FindAll(natPred);
+            Console.WriteLine($"There are {list3.Count} IE students");
+
+            //TODO - All - Create a list of players and predicate to filter out health > 50
+        }
+
+        private bool IsHighlySkilled(int skill)
+        {
+            return skill > 100;
         }
 
         private void DemoList()
         {
             //simple demo
-            List<string> strList = new List<string>
-            {
-                "apple", "banana", "kiwi"
-            };
-
-            //    strList.Add("apple"); strList.Add("banana"); strList.Add("kiwi");
+            List<string> strList = new List<string>();
+            strList.Add("apple"); strList.Add("banana"); strList.Add("kiwi");
 
             Console.WriteLine(strList[0]);
             Console.WriteLine(strList.Count);
@@ -247,111 +340,13 @@ namespace IntroToCSharp.GD3A
             //class demo
             List<Player> pList = new List<Player>
             {
-                new Player("anna", true, 0, 10, 0, 100),
-                new Player("bob", true, 0, 40, 0, 50),
-                new Player("ciara", true, 0, 60, 0, 25)
+                new Player("anna", true, new Vector3(0, 10, 0), 100, 5),
+                new Player("bob", true, new Vector3(0, 40, 0), 50, 2),
+                new Player("ciara", true, new Vector3(0, 60, 0), 25, 1)
             };
 
             foreach (Player p in pList)
                 Console.WriteLine(p);
-        }
-
-        private void DemoPredicate()
-        {
-            List<int> skillsList = new List<int>
-                {
-                    150, 22, 45, 65, 220, 85
-                };
-
-            Console.WriteLine("Highly skilled students predicate as using method...");
-            List<int> list1 = skillsList.FindAll(IsHighlySkilled);
-            foreach (int skill in list1)
-                Console.WriteLine(skill);
-
-            Console.WriteLine("Highly skilled students using predicate as lambda expression...");
-            Console.WriteLine("Enter skill threshold: ");
-            string skillThreshold = Console.ReadLine();
-            int skillInt = int.Parse(skillThreshold);
-
-            //lambda expression: (input-parameters) => expression
-            Predicate<int> skillsPred = (value) => value > skillInt;
-            List<int> list2 = skillsList.FindAll(skillsPred);
-            foreach (int skill in list2)
-                Console.WriteLine(skill);
-
-            Console.WriteLine("Nationalities using predicate as lambda expression...");
-            List<string> nationalities = new List<string>
-                {
-                    "IE", "UK", "US", "FR", "DE", "ES", "IE", "UK", "IE"
-                };
-
-            Predicate<string> natPred = (nationality) => nationality == "IE";
-            List<string> list3 = nationalities.FindAll(natPred);
-            Console.WriteLine($"There are {list3.Count} IE students");
-
-            //TODO - All - Create list of players and a predicate to filter out active players
-            List<Player> pList = new List<Player>
-            {
-                new Player("alpha", true, 3,4,5),
-                new Player("beta", false, 6,7,8),
-                new Player("chi", true, 9,10,11),
-                new Player("phi", false, 12,13,14)
-            };
-
-            Console.WriteLine("Active players...");
-
-            Predicate<Player> isActivePred = (p) => p.IsActive;
-            List<Player> activePlayers = pList.FindAll(isActivePred);
-            foreach (Player p in activePlayers)
-                Console.WriteLine(p);
-
-            Console.WriteLine("Active players with 'a'...");
-
-            Predicate<Player> IsActiveWithLetter = (player) =>
-            {
-                //code...
-                return player.IsActive && player.ID.IndexOf('a') == 0;
-            };
-
-            List<Player> activeWithPlayers = pList.FindAll(IsActiveWithLetter);
-            foreach (Player p in activeWithPlayers)
-                Console.WriteLine(p);
-
-            List<int> numList = new List<int>
-            {
-                1,3,52,3,2,15,7,48,2,201
-            };
-
-            Predicate<int> myPred = (number) => number % 2 == 1;
-            int count = CountAll(numList, myPred);
-            Console.WriteLine($"Odd: {count}");
-        }
-
-        /// <summary>
-        /// Count if the number matches any 1 of the predicates in the list
-        /// </summary>
-        /// <param name="numList"></param>
-        /// <param name="predList"></param>
-        /// <returns></returns>
-        private int CountIfMatchAny(List<int> numList, List<Predicate<int>> predList)
-        {
-            return -1;
-        }
-
-        private int CountAll(List<int> numList, Predicate<int> pred)
-        {
-            int count = 0;
-            for (int i = 0; i < numList.Count; i++)
-            {
-                if (pred(numList[i]))
-                    count++;
-            }
-            return count;
-        }
-
-        private bool IsHighlySkilled(int skill)
-        {
-            return skill > 200;
         }
 
         #endregion Demos
@@ -360,7 +355,46 @@ namespace IntroToCSharp.GD3A
 
         private void StartExercises()
         {
-            //Exercise2();
+            Console.WriteLine("\nLists & Predicates - Exercise 2...\n");
+            Exercise2();
+        }
+
+        private void Exercise2()
+        {
+            List<Player> playerList = new List<Player>
+            {
+                new Player("anna", true, new Vector3(0, 10, 0), 100, 5),
+                new Player("bob", true, new Vector3(0, 40, 0), 55, 2),
+                new Player("ciara", true, new Vector3(0, 60, 0), 25, 1)
+            };
+
+            Console.WriteLine("Enter a name to search for: ");
+            string? searchName = Console.ReadLine();
+
+            Predicate<Player> idAndHealth = (p) =>
+            {
+                return p.ID.Equals(searchName) && p.Health >= 20;
+            };
+
+            List<Player> searchResult = playerList.FindAll(idAndHealth);
+            Console.WriteLine($"Count: {searchResult.Count}");
+
+            Console.WriteLine("Top search result:\n");
+            if (searchResult.Count > 0)
+                Console.WriteLine(searchResult[0]);
+        }
+
+        /// <summary>
+        /// This hard-coded predicate is used to filter out the right person
+        /// BUT it has a limitation - it is hard-coded to filter out "bob"
+        /// INSTEAD we prefer to use a language feature called lambda expressions
+        /// SEE Exercise2 for an example of a lambda expression
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
+        private bool IsRightPerson(Player p)
+        {
+            return p.ID.Equals("bob");
         }
 
         #endregion Exercises

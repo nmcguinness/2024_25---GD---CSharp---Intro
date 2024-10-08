@@ -1,6 +1,5 @@
 ﻿using IntroToCSharp.Common.Exercise2;
 using IntroToCSharp.Common.Utilities;
-using System.Reflection;
 
 /// GD3B specific code should be placed in this namespace.
 namespace IntroToCSharp.GD3B
@@ -29,7 +28,7 @@ namespace IntroToCSharp.GD3B
         /// <summary>
         /// Insertion point for GD3B code.
         /// </summary>
-        /// <par4m name="groupName">Group identifier</param>
+        /// <param name="groupName">Group identifier</param>
         public static void Start(string groupName)
         {
             Console.WriteLine($"\n************************** Group: {groupName} **************************\n");
@@ -179,6 +178,11 @@ namespace IntroToCSharp.GD3B
             return true;
         }
 
+        private string ToLowercase(string s)
+        {
+            return s.ToLower();
+        }
+
         private void DemoFuncStrings()
         {
             string id = "     rOBERT";
@@ -186,13 +190,26 @@ namespace IntroToCSharp.GD3B
             //apply a list of actions to this string
             // format: remove whitespace, lowercase all, uppercase first char
 
-            //create 3 Actions to perform those format changes
+            //create 3 Funcs to perform those format changes
+            Func<string, string> removeWhite = (s) => { return s.Trim(); };
+            Func<string, string> toLower = ToLowercase;
+            Func<string, string> capitaliseFirst = (s) =>
+            {
+                return char.ToUpper(s[0]) + s.Substring(1);
+            };
 
             //store in a list
+            List<Func<string, string>> stringProcessors = new List<Func<string, string>>
+            {
+                removeWhite, toLower, capitaliseFirst
+            };
 
             //apply to the string
+            foreach (var processor in stringProcessors)
+                id = processor(id);
 
             //test it!
+            Console.WriteLine(id);
         }
 
         private void DemoDelegate()
