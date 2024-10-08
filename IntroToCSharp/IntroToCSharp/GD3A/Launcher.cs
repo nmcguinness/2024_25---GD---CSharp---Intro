@@ -356,9 +356,13 @@ namespace IntroToCSharp.GD3A
 
         #endregion Demos
 
+        #region Exercises
+
         private void StartExercises()
         {
             //Exercise2();
         }
+
+        #endregion Exercises
     }
 }

@@ -18,28 +18,68 @@ namespace IntroToCSharp.GD3B
             Console.WriteLine("\n************************** Demos **************************n");
             launcher.StartDemos();
 
-            Console.WriteLine("\n************************** Selected Exercise Solutions **************************n");
-            launcher.StartExercises();
+            //Console.WriteLine("\n************************** Selected Exercise Solutions **************************n");
+            //launcher.StartExercises();
         }
 
         #region Demos
 
         public void StartDemos()
         {
-            Console.WriteLine("\n****DemoClasses****\n");
-            DemoClasses();
+            //Console.WriteLine("\n****DemoClasses****\n");
+            //DemoClasses();
 
-            Console.WriteLine("\n****DemoInheritance****\n");
-            DemoInheritance();
+            //Console.WriteLine("\n****DemoInheritance****\n");
+            //DemoInheritance();
 
-            Console.WriteLine("\n****DemoInterfaces****\n");
-            DemoInterfaces();
+            //Console.WriteLine("\n****DemoInterfaces****\n");
+            //DemoInterfaces();
 
-            Console.WriteLine("\n****DemoList****\n");
-            DemoList();
+            //Console.WriteLine("\n****DemoList****\n");
+            //DemoList();
 
-            Console.WriteLine("\n****DemoPredicate****\n");
-            DemoPredicate();
+            //Console.WriteLine("\n****DemoPredicate****\n");
+            //DemoPredicate();
+
+            Console.WriteLine("\n****DemoAction****\n");
+            DemoAction();
+
+            Console.WriteLine("\n****DemoFunc****\n");
+            DemoFunc();
+
+            Console.WriteLine("\n****DemoFuncStrings****\n");
+            DemoFuncStrings();
+
+            Console.WriteLine("\n****DemoDelegate****\n");
+            DemoDelegate();
+
+            Console.WriteLine("\n****DemoEvent****\n");
+            DemoEvent();
+        }
+
+        private void DemoAction()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void DemoFunc()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void DemoFuncStrings()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void DemoDelegate()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void DemoEvent()
+        {
+            throw new NotImplementedException();
         }
 
         private void DemoClasses()
